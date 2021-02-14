@@ -1,0 +1,304 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-image: none !important;
+}
+.changepassword {
+    height: 0vh;
+    width: 100%;
+    background-color: rgba(0,0,255,0.4);
+    display: inline-flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition:all ease-in-out 1s;
+}
+.sendcodebtn {
+    width: 100px;
+    float: right;
+    height: 30px;
+    border-radius: 25px;
+    background-color: black;
+    color: wheat;
+    font-weight: bolder;
+    margin-right: 62px;
+}
+.changepassword-pane {
+    width: 500px;
+    height: 350px;
+    display: none;
+    position: fixed;
+    top: 35%;
+    left: 35%;
+    background-color: royalblue;
+    box-shadow: rgba(0,0,0,0.3) 2px 2px inset;
+}
+.entercode {
+    width:300px;
+    margin:3px;
+    font-size:1.2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:bolder;
+    margin-left:50px;
+}
+.change-passwordbtn {
+    margin-left:26%;
+    font-weight:bolder;
+    width:150px;
+    height:40px;
+    background-color:darkblue;
+    color:wheat;
+    border-radius:25px;
+    transition:all linear 0.4s;
+
+}
+    .change-passwordbtn:hover{
+        background-color:white;
+        color:darkblue;
+    }
+    .closeimage {
+        cursor: pointer;
+        height: 55px;
+        width: 55px;
+    }
+.closeimage:hover {
+    
+    animation-name:rotateCloseImage;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease-in-out;
+    animation-duration:1s;
+}
+@keyframes rotateCloseImage {
+    0% {
+        transform:rotateZ(0deg);
+      
+    }
+    100% {
+      
+        transform:rotateZ(360deg);
+    }
+}
+
+.heading-home {
+    height: 150px;
+    width: 100%;
+    font-family: 'Stylish', sans-serif;
+}
+.barline-home {
+    margin: auto;
+    height: 3px;
+    width: 200px;
+    background-color: deepskyblue;
+}
+.HomeIntro {
+    height: 580px;
+    width: 100%;
+    padding: 20px;
+    background: url("../../images/banner-bg.svg");
+    background-size: contain;
+    
+    background-repeat:no-repeat;
+}
+.HomeIntoText, .HomeIntroPic {
+    display: inline-block;
+    margin-top: 5%;
+    margin-left: 5%;
+    font-family: 'Stylish', sans-serif;
+    float: left;
+    height: 75%;
+    width: 40%;
+}
+.HomeIntoText {
+    margin:50px;
+}
+.HomeIntroPic {
+    display: block;
+    float: left;
+    background: url("../../images/homeIntoBack.jpg");
+    background-size: contain;
+    background-repeat:no-repeat;
+
+    -moz-box-shadow: 0px 6px 5px #ccc;
+    -webkit-box-shadow: 0px 6px 5px #ccc;
+    box-shadow: 0px 6px 5px #ccc;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    height: 60%;
+}
+.home-btn {
+    background-color:black;
+    color:white;
+    width:180px;
+    text-align:center;
+    border-radius:20px;
+}
+
+
+.below-intro-home {
+    display:block;
+    margin-top:20px;
+    height:200px;
+    width:100%;
+    text-align:center;
+}
+.choose-Home-Text {
+    font-size:3rem;
+    font-weight: bolder;
+    font-family: 'Stylish', sans-serif;
+    color:red;
+    
+}
+.choos-img-home {
+    margin-left: 10%;
+    display: inline-block;
+    float: left;
+    height: 110px;
+    width: 100px;
+    background: linear-gradient(rgba(163, 153, 194,1),rgba(117, 102, 163,1));
+    border-radius: 10%;
+    padding:5px;
+}
+ans-home-pic, .ans-home-pic-img {
+    height: 107px;
+    width: 95px;
+    margin-left: -12px;
+    margin-top: -4px;
+}
+.ans-home-pic {
+    margin-left:5px;
+    margin-right:5px;
+    padding:6px;
+    height:100px;
+    width:90px;
+    border-radius:10%;
+    
+}
+.choose-img-text-home {
+    margin-top: 2px;
+}
+
+.features-home {
+    height: 380px;
+    width: 100%;
+    background: linear-gradient( rgba(236, 248, 253,0.3), rgba(6, 41, 55,0.6) );
+    -moz-box-shadow: 0px 6px 5px #ccc;
+    -webkit-box-shadow: 0px 6px 5px #ccc;
+    box-shadow: 0px 6px 5px #ccc;
+    -moz-border-radius: 3 %;
+    -webkit-border-radius: 3%;
+    border-radius: 3%;
+    padding: 40px;
+}
+
+.advantage-element-home {
+    display: inline-block;
+    float: left;
+    height: 350px;
+    width: 300px;
+    background: linear-gradient(rgba(102, 151, 204,0.5),rgba(61, 120, 184,1));
+    margin-left: 9%;
+    border-radius: 15%;
+    text-align: center;
+}
+.advantage-text-home-header {
+    margin-top:20%;
+    font-weight:bolder;
+    color:red;
+    text-shadow:1px 2px 2px #333;
+    text-transform:capitalize;
+    font-size:1.5rem;
+}
+.advantage-text-home {
+    margin-top: 10px;
+    color: black;
+    font-size:1.3rem;
+    font-family: 'Stylish', sans-serif;
+    text-decoration:double;
+    padding: 20px;
+}
+.features-text-home {
+    display: inline-block;
+    float: left;
+    height: 380px;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.features-pic-home {
+    margin: auto;
+    display: inline-block;
+    height: 90%;
+    width: 50%;
+    float: left;
+    background: url("../../images/discuss with teacher.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-box-shadow: 0px 6px 5px #ccc;
+    -webkit-box-shadow: 0px 6px 5px #ccc;
+    box-shadow: 0px 6px 5px #ccc;
+    -moz-border-radius: 10%;
+    -webkit-border-radius: 10%;
+    border-radius: 10%;
+}
+.advantage-home {
+    height:450px;
+    width:100%;
+}
+.footer {
+    display:block;
+    margin:0px;
+    width: 100%;
+    height: 500px;
+    background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,1));
+    
+}
+.barline-home-footerline {
+    display:inline-block;
+    margin-top:50px;
+    
+    height:2px;
+    background-color:white;
+    width:100%;
+    
+}
+.footer-text-home {
+    display: inline-block;
+    height: 400px;
+    margin: 0px;
+    margin-top:10px;
+    width: 59%;
+    float: left;
+    background-color: black;
+}
+.googleMap-home {
+    display:inline-block;
+    height:400px;
+    margin:5px;
+    margin-top:10px;
+    width:40%;
+    float:left;
+    background-color:white;
+}
+.footer-text {
+    color: white;
+    display: inline-block;
+    float: left;
+   
+    margin-left: 10%;
+}
+.footer-text-style {
+    color: white;
+    text-align:center;
+    font-family: 'Stylish', sans-serif;
+    margin-bottom:10px;
+
+}
+.services-footer-home, .staf-footer-home, .Courses-footer-home {
+    display: inline-block;
+    width: 30%;
+    margin:10px;
+    background-color: black;
+    height: 100%;
+    float: left;
+}

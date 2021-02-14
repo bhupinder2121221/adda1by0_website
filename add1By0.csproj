@@ -1,0 +1,556 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B36A76C6-DEEF-4DF6-8EDC-1D6B749FED11}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>add1By0</RootNamespace>
+    <AssemblyName>add1By0</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44361</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.Platform.NetStandard, Version=4.4.0.4099, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>packages\Emgu.CV.4.4.0.4099\lib\netstandard2.0\Emgu.CV.Platform.NetStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.1.11\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Storage.Common, Version=11.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Azure.Storage.Common.11.2.2\lib\net452\Microsoft.Azure.Storage.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.21\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="paytm">
+      <HintPath>..\..\..\Desktop\Paytm_Web_Sample_Kit_dotNet-master\Paytm_Web_Sample_Kit_dotNet-master\.net_4.5\paytm.dll</HintPath>
+    </Reference>
+    <Reference Include="PaytmChecksum, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\PaytmChecksum.1.0.0\lib\PaytmChecksum.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Drawing.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Drawing.Primitives.4.3.0\lib\net45\System.Drawing.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.21\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.21\lib\net452\Zstandard.Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Adding_Streaming.aspx" />
+    <Content Include="add_topic_discussion.js" />
+    <Content Include="agoraLiveStreaming.js" />
+    <Content Include="agoraLiveStreaming2.js" />
+    <Content Include="AgoraRTCSDK-3.2.3.js" />
+    <Content Include="App_Themes\css\aboutPage.css" />
+    <Content Include="App_Themes\css\changepassword.css" />
+    <Content Include="App_Themes\css\classes.css" />
+    <Content Include="App_Themes\css\courses.css" />
+    <Content Include="App_Themes\css\discussion.css" />
+    <Content Include="App_Themes\css\homePage.css" />
+    <Content Include="App_Themes\css\livestreamingPortal.css" />
+    <Content Include="App_Themes\css\loginPage.css" />
+    <Content Include="App_Themes\css\masterpage.css" />
+    <Content Include="App_Themes\css\premiumMembership.css" />
+    <Content Include="App_Themes\css\profile.css" />
+    <Content Include="App_Themes\css\sponsership.css" />
+    <Content Include="App_Themes\User_uploaded_Pics\bhupindernew%40gmail.com.png" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-grid.css" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-grid.min.css" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-grid.rtl.css" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-reboot.css" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-reboot.min.css" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-reboot.rtl.css" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-utilities.css" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-utilities.min.css" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-utilities.rtl.css" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap.css" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap.min.css" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap.rtl.css" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap.rtl.min.css" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\js\bootstrap.bundle.js" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\js\bootstrap.bundle.min.js" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\js\bootstrap.esm.js" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\js\bootstrap.esm.min.js" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\js\bootstrap.js" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\js\bootstrap.min.js" />
+    <Content Include="classes_js.js" />
+    <Content Include="discussion.aspx" />
+    <Content Include="discussion_javascript.js" />
+    <Content Include="discussion_chatBox.aspx" />
+    <Content Include="face-api.js" />
+    <Content Include="face-api.min.js" />
+    <Content Include="face-recognition-signin.js" />
+    <Content Include="images\00966 Vintage Line Break Elements.svg" />
+    <Content Include="images\1542594957.svg" />
+    <Content Include="images\background-1297485.svg" />
+    <Content Include="images\backgrounf.svg" />
+    <Content Include="images\floral-1751088.svg" />
+    <Content Include="images\home1.png" />
+    <Content Include="images\home2.png" />
+    <Content Include="images\loadingsvg.svg" />
+    <Content Include="images\page.jpg" />
+    <Content Include="images\pexels-giftpunditscom-2072168.jpg" />
+    <Content Include="images\pngegg.png" />
+    <Content Include="images\Stacked Wave.svg" />
+    <Content Include="images\user.svg" />
+    <Content Include="images\Wave-10s-1536px.svg" />
+    <Content Include="startingpageOfWebsite.aspx" />
+    <Content Include="TextFile1.txt" />
+    <Content Include="web_pages\changepassword.aspx" />
+    <Content Include="web_pages\sponsership.aspx" />
+    <Content Include="windowCloseEvent.js" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-grid.css.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-reboot.css.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-utilities.css.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-utilities.min.css.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap.css.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap.min.css.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap.rtl.css.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap.rtl.min.css.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\js\bootstrap.bundle.js.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\js\bootstrap.esm.js.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\js\bootstrap.esm.min.js.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\js\bootstrap.js.map" />
+    <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\js\bootstrap.min.js.map" />
+    <None Include="face_training\haarcascade_frontalface_alt_tree.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="flex.js" />
+    <Content Include="images\1067_delete_Cancel_close_cross-512.png" />
+    <Content Include="images\adda1by0.png" />
+    <Content Include="images\all-world-home.png" />
+    <Content Include="images\allaound_world.jpg" />
+    <Content Include="images\arrow.png" />
+    <Content Include="images\banner-bg.svg" />
+    <Content Include="images\become-creative-home.png" />
+    <Content Include="images\bookcover1.PNG" />
+    <Content Include="images\certificates-home.png" />
+    <Content Include="images\discuss with teacher.jpg" />
+    <Content Include="images\discuss-home.png" />
+    <Content Include="images\discussion.jpg" />
+    <Content Include="images\emplty_class.jpg" />
+    <Content Include="images\extraclassespic1.PNG" />
+    <Content Include="images\extraclassespic2.PNG" />
+    <Content Include="images\geteveryResource-home-.jpg" />
+    <Content Include="images\home-512.png" />
+    <Content Include="images\homeIntoBack.jpg" />
+    <Content Include="images\implement.jpg" />
+    <Content Include="images\indea-home.png" />
+    <Content Include="images\intro.jpg" />
+    <Content Include="images\learn-online-home.jpg" />
+    <Content Include="images\login.jpg" />
+    <Content Include="images\new_idea.jpg" />
+    <Content Include="images\nextarrow.png" />
+    <Content Include="images\notpaid_pic.png" />
+    <Content Include="images\online-learn-home.png" />
+    <Content Include="images\onlineclass.jpg" />
+    <Content Include="images\paid.png" />
+    <Content Include="images\Payment-PNG-Free-Download.png" />
+    <Content Include="images\premium mebership.jpg" />
+    <Content Include="images\profile-details.jpg" />
+    <Content Include="images\profile-details1.jpg" />
+    <Content Include="images\question.png" />
+    <Content Include="images\redirectingLoading.gif" />
+    <Content Include="images\redirectingLoading1.gif" />
+    <Content Include="images\si2.png" />
+    <Content Include="images\si3.png" />
+    <Content Include="images\si4.png" />
+    <Content Include="images\si6.png" />
+    <Content Include="images\team-member-1.jpg" />
+    <Content Include="images\team-member-2.jpg" />
+    <Content Include="images\team-member-3.jpg" />
+    <Content Include="images\think-every-step-home.png" />
+    <Content Include="images\topteacher-home.jpg" />
+    <Content Include="images\welsome.jpg" />
+    <Content Include="Live_adda_Classes.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="profile_page.js" />
+    <Content Include="questions.js" />
+    <Content Include="radioButtonOnselected.js" />
+    <Content Include="setLiveStreaming.aspx" />
+    <Content Include="userpane.js" />
+    <Content Include="validations_for_inputs.js" />
+    <Content Include="Web.config" />
+    <Content Include="webcamClicking_picture.js" />
+    <Content Include="web_pages\aboutPage.aspx" />
+    <Content Include="web_pages\adda_classes.aspx" />
+    <Content Include="web_pages\checkoutPage.aspx" />
+    <Content Include="web_pages\checkout_redirectingPage.aspx" />
+    <Content Include="web_pages\courses.aspx" />
+    <Content Include="web_pages\homepage.aspx" />
+    <Content Include="web_pages\loginPage.aspx" />
+    <Content Include="web_pages\Login_page.aspx" />
+    <Content Include="web_pages\premiumMembership.aspx" />
+    <Content Include="web_pages\profile.aspx" />
+    <Content Include="web_pages\Redirecting.aspx" />
+    <Content Include="web_pages\signInPage.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adding_Streaming.aspx.cs">
+      <DependentUpon>Adding_Streaming.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adding_Streaming.aspx.designer.cs">
+      <DependentUpon>Adding_Streaming.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="discussion.aspx.cs">
+      <DependentUpon>discussion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="discussion.aspx.designer.cs">
+      <DependentUpon>discussion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="discussion_chatBox.aspx.cs">
+      <DependentUpon>discussion_chatBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="discussion_chatBox.aspx.designer.cs">
+      <DependentUpon>discussion_chatBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Live_adda_Classes.aspx.cs">
+      <DependentUpon>Live_adda_Classes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Live_adda_Classes.aspx.designer.cs">
+      <DependentUpon>Live_adda_Classes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="setLiveStreaming.aspx.cs">
+      <DependentUpon>setLiveStreaming.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="setLiveStreaming.aspx.designer.cs">
+      <DependentUpon>setLiveStreaming.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="startingpageOfWebsite.aspx.cs">
+      <DependentUpon>startingpageOfWebsite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="startingpageOfWebsite.aspx.designer.cs">
+      <DependentUpon>startingpageOfWebsite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_pages\aboutPage.aspx.cs">
+      <DependentUpon>aboutPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_pages\aboutPage.aspx.designer.cs">
+      <DependentUpon>aboutPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_pages\adda_classes.aspx.cs">
+      <DependentUpon>adda_classes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_pages\adda_classes.aspx.designer.cs">
+      <DependentUpon>adda_classes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_pages\changepassword.aspx.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_pages\changepassword.aspx.designer.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_pages\checkoutPage.aspx.cs">
+      <DependentUpon>checkoutPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_pages\checkoutPage.aspx.designer.cs">
+      <DependentUpon>checkoutPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_pages\checkout_redirectingPage.aspx.cs">
+      <DependentUpon>checkout_redirectingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_pages\checkout_redirectingPage.aspx.designer.cs">
+      <DependentUpon>checkout_redirectingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_pages\courses.aspx.cs">
+      <DependentUpon>courses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_pages\courses.aspx.designer.cs">
+      <DependentUpon>courses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_pages\homepage.aspx.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_pages\homepage.aspx.designer.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_pages\loginPage.aspx.cs">
+      <DependentUpon>loginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_pages\loginPage.aspx.designer.cs">
+      <DependentUpon>loginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_pages\Login_page.aspx.cs">
+      <DependentUpon>Login_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_pages\Login_page.aspx.designer.cs">
+      <DependentUpon>Login_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_pages\masterPage.Master.cs">
+      <DependentUpon>masterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_pages\masterPage.Master.designer.cs">
+      <DependentUpon>masterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="web_pages\premiumMembership.aspx.cs">
+      <DependentUpon>premiumMembership.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_pages\premiumMembership.aspx.designer.cs">
+      <DependentUpon>premiumMembership.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_pages\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_pages\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_pages\Redirecting.aspx.cs">
+      <DependentUpon>Redirecting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_pages\Redirecting.aspx.designer.cs">
+      <DependentUpon>Redirecting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_pages\signInPage.aspx.cs">
+      <DependentUpon>signInPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_pages\signInPage.aspx.designer.cs">
+      <DependentUpon>signInPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_pages\sponsership.aspx.cs">
+      <DependentUpon>sponsership.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_pages\sponsership.aspx.designer.cs">
+      <DependentUpon>sponsership.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\sample\TextBox.skin" />
+    <Content Include="models\face_landmark_68_model-shard1" />
+    <Content Include="models\face_landmark_68_model-weights_manifest.json" />
+    <Content Include="models\face_recognition_model-shard1" />
+    <Content Include="models\face_recognition_model-shard2" />
+    <Content Include="models\face_recognition_model-weights_manifest.json" />
+    <Content Include="models\mtcnn_model-shard1" />
+    <Content Include="models\mtcnn_model-weights_manifest.json" />
+    <Content Include="models\ssd_mobilenetv1_model-shard1" />
+    <Content Include="models\ssd_mobilenetv1_model-shard2" />
+    <Content Include="models\ssd_mobilenetv1_model-weights_manifest.json" />
+    <Content Include="models\tiny_face_detector_model-shard1" />
+    <Content Include="models\tiny_face_detector_model-weights_manifest.json" />
+    <Content Include="models\face_expression_model-shard1" />
+    <Content Include="models\face_expression_model-weights_manifest.json" />
+    <Content Include="App_Themes\models\face_expression_model-shard1" />
+    <Content Include="App_Themes\models\face_expression_model-weights_manifest.json" />
+    <Content Include="App_Themes\models\face_landmark_68_model-shard1" />
+    <Content Include="App_Themes\models\face_landmark_68_model-weights_manifest.json" />
+    <Content Include="App_Themes\models\face_landmark_68_tiny_model-shard1" />
+    <Content Include="App_Themes\models\face_landmark_68_tiny_model-weights_manifest.json" />
+    <Content Include="App_Themes\models\face_recognition_model-shard1" />
+    <Content Include="App_Themes\models\face_recognition_model-shard2" />
+    <Content Include="App_Themes\models\face_recognition_model-weights_manifest.json" />
+    <Content Include="App_Themes\models\tiny_face_detector_model-shard1" />
+    <Content Include="App_Themes\models\tiny_face_detector_model-weights_manifest.json" />
+    <Content Include="models\face_expression_model-shard1 - Copy" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="web_pages\masterPage.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Themes\js\" />
+    <Folder Include="images\userUploaded_pics\" />
+    <Folder Include="themes\" />
+    <Folder Include="user_uploaded_pics\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58833</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44361/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

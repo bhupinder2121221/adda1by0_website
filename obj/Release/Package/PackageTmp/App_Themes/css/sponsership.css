@@ -1,0 +1,32 @@
+﻿body {
+}
+.backpage {
+    opacity:0.5;
+    background: url('../../images/pexels-giftpunditscom-2072168.jpg');
+    background-size:cover;
+}
+.letter {
+    width: 50%;
+    border-radius:15px;
+    height: 95%;
+    background: url('../../images/page.jpg');
+    margin: auto;
+    transform: translateY(10px);
+}
+.heading_sponsership {
+    font-family: 'Nerko One', cursive;
+    font-size: 3.9rem;
+    color: black;
+    opacity: 4;
+    text-align: center;
+}
+.name {
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+}
+.namesspace {
+    overflow-y:scroll;
+    
+}
+

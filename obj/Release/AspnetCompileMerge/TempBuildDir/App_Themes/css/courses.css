@@ -1,0 +1,239 @@
+﻿body {
+}
+.courses-back {
+    background-color: purple ;
+    
+    height: 500px;
+    width: 100%;
+}
+.heading.courses {
+    color:purple;
+    margin:20px;
+    font-size:2.5rem;
+}
+.heading.courses.classes {
+        color: darkblue;
+        letter-spacing:0.2rem;
+        text-decoration:double;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        animation-name: classesHeading;
+        
+    }
+
+.barline.courses {
+    margin-top:-20px;
+    width:500px;
+    transition:all ease-in-out 2s;
+}
+
+.priliminary-classes {
+    height: auto    ;
+    width: 100%;
+    background: linear-gradient(rgba(244, 244, 249,1),rgba(184, 219, 217,1));
+}
+.secondary-classes {
+    height: 440px;
+    width: 100%;
+    background: linear-gradient(rgba(244, 244, 249,1),rgba(184, 219, 217,1));
+}
+.add_extra_class {
+    height: 29px;
+    width: 122px;
+    background: purple;
+    color: white;
+    font-size: large;
+    font-family: cursive;
+    font-weight: 900;
+    border-radius: 25px;
+    display: inline-block;
+    float: right;
+    margin-right: 23px;
+    transition:all ease 0.5s;
+    cursor:pointer;
+}
+.add_extra_class:hover{
+    color:purple;
+    background-color:white;
+    border:2px solid purple;
+}
+.classes-box {
+    display: inline-block;
+    margin: 86px;
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    border: 3px solid purple;
+    border-radius: 50%;
+    background: url("../../images/all-world-home.png");
+    background-size: contain;
+    transition: all linear 0.5s;
+}
+.secondary-class-box {
+    display: inline-block;
+    margin: 86px;
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    border: 3px solid purple;
+    border-radius: 25px;
+    background: url("../../images/all-world-home.png");
+    background-size: contain;
+    transition: all linear 0.5s;
+}
+.class11:hover,.secondary-class-box {
+    background-color: red;
+    transform-origin: left;
+    transform: rotateY(-101deg);
+}
+.class-box-heading {
+    display:block;
+    color:darkblue;
+    transform:translateY(-40px);
+    height: 35px;
+    border: 2px solid none ;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    
+    transition: all ease-in-out 0.5s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.classes-box:hover > .class-box-heading {
+    transform:translateY(100px);
+    background-color:purple;
+    color:navajowhite;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:1.5rem;
+    font-weight:bolder;
+}
+.classes-box:hover {
+    background: url("../../images/all-world-home.png");
+    border-radius: 50%;
+    border-color: purple;
+    animation-name: classesrotating;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+@keyframes classesrotating{
+    0%{
+        transform:rotateZ(0deg);
+    }
+    100%{
+        transform:rotateZ(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+.book {
+    transform-style: preserve-3d;
+    
+    height: 250px;
+    
+    backface-visibility: visible;
+}
+#extraclasses1 {
+    background:url("../../images/extraclassespic1.PNG");
+}
+#extraclasses2 {
+    background: url("../../images/extraclassespic1.PNG");
+}
+#extraclasses3, #extraclasses4 {
+    background: url("../../images/extraclassespic2.PNG");
+}
+.front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left center;
+    transition: transform 0.5s ease-in-out, box-shadow .5s ease-in-out;
+}
+
+.front, .back {
+    background: url("../../images/bookcover1.PNG");
+}
+
+.front, .page1, .page3, .page5 {
+    border-bottom-right-radius: .5em;
+    border-top-right-radius: .5em;
+}
+
+.back, .page2, .page4, .page6 {
+    border-bottom-right-radius: .5em;
+    border-top-right-radius: .5em;
+}
+
+.page1 {
+    background: #efefef;
+}
+
+.page2 {
+    background: #efefef;
+}
+
+.page3 {
+    background: #f5f5f5;
+}
+
+.page4 {
+    background: #f5f5f5;
+}
+
+.page5 {
+    background: #fafafa;
+}
+
+.page6 {
+    background: #fdfdfd;
+}
+
+.book:hover .front {
+    transform: rotateY(-160deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.book:hover .page1 {
+    transform: rotateY(-150deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.book:hover .page2 {
+    transform: rotateY(-30deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.book:hover .page3 {
+    transform: rotateY(-140deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.book:hover .page4 {
+    transform: rotateY(-40deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.book:hover .page5 {
+    transform: rotateY(-130deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.book:hover .page6 {
+    transform: rotateY(-50deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.book:hover .back {
+    transform: rotateY(-20deg) scale(1.1);
+}

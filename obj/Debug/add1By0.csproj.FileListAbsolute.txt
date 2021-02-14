@@ -1,0 +1,389 @@
+C:\Users\bhupi\source\repos\add1By0\bin\add1By0.dll.config
+C:\Users\bhupi\source\repos\add1By0\bin\add1By0.dll
+C:\Users\bhupi\source\repos\add1By0\bin\add1By0.pdb
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\csc.exe
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\csc.exe.config
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\csc.rsp
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\csi.exe
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\csi.exe.config
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\csi.rsp
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.AppContext.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Console.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.IO.Compression.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Net.Http.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Net.Sockets.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.ValueTuple.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Xml.XPath.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\vbc.exe
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\vbc.exe.config
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\vbc.rsp
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\VBCSCompiler.exe
+C:\Users\bhupi\source\repos\add1By0\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\bhupi\source\repos\add1By0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\bhupi\source\repos\add1By0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\bhupi\source\repos\add1By0\obj\Debug\add1By0.csprojAssemblyReference.cache
+C:\Users\bhupi\source\repos\add1By0\obj\Debug\add1By0.csproj.CoreCompileInputs.cache
+C:\Users\bhupi\source\repos\add1By0\obj\Debug\add1By0.csproj.CopyComplete
+C:\Users\bhupi\source\repos\add1By0\obj\Debug\add1By0.dll
+C:\Users\bhupi\source\repos\add1By0\obj\Debug\add1By0.pdb
+C:\Users\bhupi\source\repos\add1By0\bin\BouncyCastle.Crypto.dll
+C:\Users\bhupi\source\repos\add1By0\bin\Google.Protobuf.dll
+C:\Users\bhupi\source\repos\add1By0\bin\K4os.Compression.LZ4.dll
+C:\Users\bhupi\source\repos\add1By0\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\bhupi\source\repos\add1By0\bin\K4os.Hash.xxHash.dll
+C:\Users\bhupi\source\repos\add1By0\bin\MySql.Data.dll
+C:\Users\bhupi\source\repos\add1By0\bin\Renci.SshNet.dll
+C:\Users\bhupi\source\repos\add1By0\bin\System.Buffers.dll
+C:\Users\bhupi\source\repos\add1By0\bin\System.Memory.dll
+C:\Users\bhupi\source\repos\add1By0\bin\System.Numerics.Vectors.dll
+C:\Users\bhupi\source\repos\add1By0\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\bhupi\source\repos\add1By0\bin\Ubiety.Dns.Core.dll
+C:\Users\bhupi\source\repos\add1By0\bin\Zstandard.Net.dll
+C:\Users\bhupi\source\repos\add1By0\bin\Google.Protobuf.xml
+C:\Users\bhupi\source\repos\add1By0\bin\K4os.Compression.LZ4.xml
+C:\Users\bhupi\source\repos\add1By0\bin\K4os.Compression.LZ4.Streams.xml
+C:\Users\bhupi\source\repos\add1By0\bin\K4os.Hash.xxHash.xml
+C:\Users\bhupi\source\repos\add1By0\bin\MySql.Data.xml
+C:\Users\bhupi\source\repos\add1By0\bin\System.Buffers.xml
+C:\Users\bhupi\source\repos\add1By0\bin\System.Memory.xml
+C:\Users\bhupi\source\repos\add1By0\bin\System.Numerics.Vectors.xml
+C:\Users\bhupi\source\repos\add1By0\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\bhupi\source\repos\add1By0\bin\AForge.dll
+C:\Users\bhupi\source\repos\add1By0\bin\AForge.Video.DirectShow.dll
+C:\Users\bhupi\source\repos\add1By0\bin\AForge.Video.dll
+C:\Users\bhupi\source\repos\add1By0\bin\AForge.xml
+C:\Users\bhupi\source\repos\add1By0\bin\AForge.Video.xml
+C:\Users\bhupi\source\repos\add1By0\bin\AForge.Video.DirectShow.xml
+C:\Users\bhupi\source\repos\add1By0\bin\face_training\haarcascade_frontalface_alt_tree.xml
+C:\Users\bhupi\source\repos\add1By0\bin\Emgu.CV.Platform.NetStandard.dll
+C:\Users\bhupi\source\repos\add1By0\bin\Emgu.CV.Platform.NetStandard.xml
+C:\Users\bhupi\source\repos\add1By0\bin\Microsoft.Azure.KeyVault.Core.dll
+C:\Users\bhupi\source\repos\add1By0\bin\Microsoft.Azure.Storage.Common.dll
+C:\Users\bhupi\source\repos\add1By0\bin\Newtonsoft.Json.dll
+C:\Users\bhupi\source\repos\add1By0\bin\PaytmChecksum.dll
+C:\Users\bhupi\source\repos\add1By0\bin\Microsoft.Azure.KeyVault.Core.xml
+C:\Users\bhupi\source\repos\add1By0\bin\Microsoft.Azure.Storage.Common.xml
+C:\Users\bhupi\source\repos\add1By0\bin\Newtonsoft.Json.xml
+C:\Users\bhupi\source\repos\add1By0\bin\paytm.dll
+F:\adda1by0 Project\add1By0\bin\face_training\haarcascade_frontalface_alt_tree.xml
+F:\adda1by0 Project\add1By0\bin\add1By0.dll.config
+F:\adda1by0 Project\add1By0\bin\add1By0.dll
+F:\adda1by0 Project\add1By0\bin\add1By0.pdb
+F:\adda1by0 Project\add1By0\bin\roslyn\csc.exe
+F:\adda1by0 Project\add1By0\bin\roslyn\csc.exe.config
+F:\adda1by0 Project\add1By0\bin\roslyn\csc.rsp
+F:\adda1by0 Project\add1By0\bin\roslyn\csi.exe
+F:\adda1by0 Project\add1By0\bin\roslyn\csi.exe.config
+F:\adda1by0 Project\add1By0\bin\roslyn\csi.rsp
+F:\adda1by0 Project\add1By0\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\adda1by0 Project\add1By0\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\Microsoft.Managed.Core.targets
+F:\adda1by0 Project\add1By0\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\adda1by0 Project\add1By0\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.AppContext.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Collections.Immutable.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Console.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Globalization.Calendars.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.IO.Compression.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.IO.Compression.ZipFile.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.IO.FileSystem.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Net.Http.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Net.Sockets.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Reflection.Metadata.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Threading.Tasks.Extensions.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.ValueTuple.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Xml.XmlDocument.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Xml.XPath.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\adda1by0 Project\add1By0\bin\roslyn\vbc.exe
+F:\adda1by0 Project\add1By0\bin\roslyn\vbc.exe.config
+F:\adda1by0 Project\add1By0\bin\roslyn\vbc.rsp
+F:\adda1by0 Project\add1By0\bin\roslyn\VBCSCompiler.exe
+F:\adda1by0 Project\add1By0\bin\roslyn\VBCSCompiler.exe.config
+F:\adda1by0 Project\add1By0\bin\AForge.dll
+F:\adda1by0 Project\add1By0\bin\AForge.Video.DirectShow.dll
+F:\adda1by0 Project\add1By0\bin\AForge.Video.dll
+F:\adda1by0 Project\add1By0\bin\BouncyCastle.Crypto.dll
+F:\adda1by0 Project\add1By0\bin\Emgu.CV.Platform.NetStandard.dll
+F:\adda1by0 Project\add1By0\bin\Google.Protobuf.dll
+F:\adda1by0 Project\add1By0\bin\K4os.Compression.LZ4.dll
+F:\adda1by0 Project\add1By0\bin\K4os.Compression.LZ4.Streams.dll
+F:\adda1by0 Project\add1By0\bin\K4os.Hash.xxHash.dll
+F:\adda1by0 Project\add1By0\bin\Microsoft.Azure.KeyVault.Core.dll
+F:\adda1by0 Project\add1By0\bin\Microsoft.Azure.Storage.Common.dll
+F:\adda1by0 Project\add1By0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\adda1by0 Project\add1By0\bin\MySql.Data.dll
+F:\adda1by0 Project\add1By0\bin\Newtonsoft.Json.dll
+F:\adda1by0 Project\add1By0\bin\PaytmChecksum.dll
+F:\adda1by0 Project\add1By0\bin\System.Buffers.dll
+F:\adda1by0 Project\add1By0\bin\System.Memory.dll
+F:\adda1by0 Project\add1By0\bin\System.Numerics.Vectors.dll
+F:\adda1by0 Project\add1By0\bin\System.Runtime.CompilerServices.Unsafe.dll
+F:\adda1by0 Project\add1By0\bin\Ubiety.Dns.Core.dll
+F:\adda1by0 Project\add1By0\bin\Zstandard.Net.dll
+F:\adda1by0 Project\add1By0\bin\Renci.SshNet.dll
+F:\adda1by0 Project\add1By0\bin\AForge.xml
+F:\adda1by0 Project\add1By0\bin\AForge.Video.xml
+F:\adda1by0 Project\add1By0\bin\AForge.Video.DirectShow.xml
+F:\adda1by0 Project\add1By0\bin\Emgu.CV.Platform.NetStandard.xml
+F:\adda1by0 Project\add1By0\bin\Google.Protobuf.xml
+F:\adda1by0 Project\add1By0\bin\K4os.Compression.LZ4.xml
+F:\adda1by0 Project\add1By0\bin\K4os.Compression.LZ4.Streams.xml
+F:\adda1by0 Project\add1By0\bin\K4os.Hash.xxHash.xml
+F:\adda1by0 Project\add1By0\bin\Microsoft.Azure.KeyVault.Core.xml
+F:\adda1by0 Project\add1By0\bin\Microsoft.Azure.Storage.Common.xml
+F:\adda1by0 Project\add1By0\bin\MySql.Data.xml
+F:\adda1by0 Project\add1By0\bin\Newtonsoft.Json.xml
+F:\adda1by0 Project\add1By0\bin\System.Buffers.xml
+F:\adda1by0 Project\add1By0\bin\System.Memory.xml
+F:\adda1by0 Project\add1By0\bin\System.Numerics.Vectors.xml
+F:\adda1by0 Project\add1By0\bin\System.Runtime.CompilerServices.Unsafe.xml
+F:\adda1by0 Project\add1By0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\adda1by0 Project\add1By0\obj\Debug\add1By0.csprojAssemblyReference.cache
+F:\adda1by0 Project\add1By0\obj\Debug\add1By0.csproj.CoreCompileInputs.cache
+F:\adda1by0 Project\add1By0\obj\Debug\add1By0.csproj.CopyComplete
+F:\adda1by0 Project\add1By0\obj\Debug\add1By0.dll
+F:\adda1by0 Project\add1By0\obj\Debug\add1By0.pdb
+F:\adda1by0_Project\add1By0\bin\face_training\haarcascade_frontalface_alt_tree.xml
+F:\adda1by0_Project\add1By0\bin\add1By0.dll.config
+F:\adda1by0_Project\add1By0\bin\add1By0.dll
+F:\adda1by0_Project\add1By0\bin\add1By0.pdb
+F:\adda1by0_Project\add1By0\bin\roslyn\csc.exe
+F:\adda1by0_Project\add1By0\bin\roslyn\csc.exe.config
+F:\adda1by0_Project\add1By0\bin\roslyn\csc.rsp
+F:\adda1by0_Project\add1By0\bin\roslyn\csi.exe
+F:\adda1by0_Project\add1By0\bin\roslyn\csi.exe.config
+F:\adda1by0_Project\add1By0\bin\roslyn\csi.rsp
+F:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.Managed.Core.targets
+F:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.AppContext.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Collections.Immutable.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Console.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Globalization.Calendars.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.IO.Compression.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.IO.Compression.ZipFile.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.IO.FileSystem.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Net.Http.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Net.Sockets.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Reflection.Metadata.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Threading.Tasks.Extensions.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.ValueTuple.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Xml.XmlDocument.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Xml.XPath.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\adda1by0_Project\add1By0\bin\roslyn\vbc.exe
+F:\adda1by0_Project\add1By0\bin\roslyn\vbc.exe.config
+F:\adda1by0_Project\add1By0\bin\roslyn\vbc.rsp
+F:\adda1by0_Project\add1By0\bin\roslyn\VBCSCompiler.exe
+F:\adda1by0_Project\add1By0\bin\roslyn\VBCSCompiler.exe.config
+F:\adda1by0_Project\add1By0\bin\AForge.dll
+F:\adda1by0_Project\add1By0\bin\AForge.Video.DirectShow.dll
+F:\adda1by0_Project\add1By0\bin\AForge.Video.dll
+F:\adda1by0_Project\add1By0\bin\BouncyCastle.Crypto.dll
+F:\adda1by0_Project\add1By0\bin\Emgu.CV.Platform.NetStandard.dll
+F:\adda1by0_Project\add1By0\bin\Google.Protobuf.dll
+F:\adda1by0_Project\add1By0\bin\K4os.Compression.LZ4.dll
+F:\adda1by0_Project\add1By0\bin\K4os.Compression.LZ4.Streams.dll
+F:\adda1by0_Project\add1By0\bin\K4os.Hash.xxHash.dll
+F:\adda1by0_Project\add1By0\bin\Microsoft.Azure.KeyVault.Core.dll
+F:\adda1by0_Project\add1By0\bin\Microsoft.Azure.Storage.Common.dll
+F:\adda1by0_Project\add1By0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\adda1by0_Project\add1By0\bin\MySql.Data.dll
+F:\adda1by0_Project\add1By0\bin\Newtonsoft.Json.dll
+F:\adda1by0_Project\add1By0\bin\PaytmChecksum.dll
+F:\adda1by0_Project\add1By0\bin\System.Buffers.dll
+F:\adda1by0_Project\add1By0\bin\System.Memory.dll
+F:\adda1by0_Project\add1By0\bin\System.Numerics.Vectors.dll
+F:\adda1by0_Project\add1By0\bin\System.Runtime.CompilerServices.Unsafe.dll
+F:\adda1by0_Project\add1By0\bin\Ubiety.Dns.Core.dll
+F:\adda1by0_Project\add1By0\bin\Zstandard.Net.dll
+F:\adda1by0_Project\add1By0\bin\Renci.SshNet.dll
+F:\adda1by0_Project\add1By0\bin\AForge.xml
+F:\adda1by0_Project\add1By0\bin\AForge.Video.xml
+F:\adda1by0_Project\add1By0\bin\AForge.Video.DirectShow.xml
+F:\adda1by0_Project\add1By0\bin\Emgu.CV.Platform.NetStandard.xml
+F:\adda1by0_Project\add1By0\bin\Google.Protobuf.xml
+F:\adda1by0_Project\add1By0\bin\K4os.Compression.LZ4.xml
+F:\adda1by0_Project\add1By0\bin\K4os.Compression.LZ4.Streams.xml
+F:\adda1by0_Project\add1By0\bin\K4os.Hash.xxHash.xml
+F:\adda1by0_Project\add1By0\bin\Microsoft.Azure.KeyVault.Core.xml
+F:\adda1by0_Project\add1By0\bin\Microsoft.Azure.Storage.Common.xml
+F:\adda1by0_Project\add1By0\bin\MySql.Data.xml
+F:\adda1by0_Project\add1By0\bin\Newtonsoft.Json.xml
+F:\adda1by0_Project\add1By0\bin\System.Buffers.xml
+F:\adda1by0_Project\add1By0\bin\System.Memory.xml
+F:\adda1by0_Project\add1By0\bin\System.Numerics.Vectors.xml
+F:\adda1by0_Project\add1By0\bin\System.Runtime.CompilerServices.Unsafe.xml
+F:\adda1by0_Project\add1By0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\adda1by0_Project\add1By0\obj\Debug\add1By0.csprojAssemblyReference.cache
+F:\adda1by0_Project\add1By0\obj\Debug\add1By0.csproj.CoreCompileInputs.cache
+F:\adda1by0_Project\add1By0\obj\Debug\add1By0.csproj.CopyComplete
+F:\adda1by0_Project\add1By0\obj\Debug\add1By0.dll
+F:\adda1by0_Project\add1By0\obj\Debug\add1By0.pdb
+G:\adda1by0_Project\add1By0\bin\face_training\haarcascade_frontalface_alt_tree.xml
+G:\adda1by0_Project\add1By0\bin\add1By0.dll.config
+G:\adda1by0_Project\add1By0\bin\add1By0.dll
+G:\adda1by0_Project\add1By0\bin\add1By0.pdb
+G:\adda1by0_Project\add1By0\bin\roslyn\csc.exe
+G:\adda1by0_Project\add1By0\bin\roslyn\csc.exe.config
+G:\adda1by0_Project\add1By0\bin\roslyn\csc.rsp
+G:\adda1by0_Project\add1By0\bin\roslyn\csi.exe
+G:\adda1by0_Project\add1By0\bin\roslyn\csi.exe.config
+G:\adda1by0_Project\add1By0\bin\roslyn\csi.rsp
+G:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.Managed.Core.targets
+G:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\adda1by0_Project\add1By0\bin\roslyn\Microsoft.Win32.Primitives.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.AppContext.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Collections.Immutable.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Console.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Globalization.Calendars.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.IO.Compression.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.IO.Compression.ZipFile.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.IO.FileSystem.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Net.Http.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Net.Sockets.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Reflection.Metadata.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Security.Cryptography.Encoding.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Security.Cryptography.Primitives.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Text.Encoding.CodePages.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Threading.Tasks.Extensions.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.ValueTuple.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Xml.ReaderWriter.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Xml.XmlDocument.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Xml.XPath.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\System.Xml.XPath.XDocument.dll
+G:\adda1by0_Project\add1By0\bin\roslyn\vbc.exe
+G:\adda1by0_Project\add1By0\bin\roslyn\vbc.exe.config
+G:\adda1by0_Project\add1By0\bin\roslyn\vbc.rsp
+G:\adda1by0_Project\add1By0\bin\roslyn\VBCSCompiler.exe
+G:\adda1by0_Project\add1By0\bin\roslyn\VBCSCompiler.exe.config
+G:\adda1by0_Project\add1By0\bin\AForge.dll
+G:\adda1by0_Project\add1By0\bin\AForge.Video.DirectShow.dll
+G:\adda1by0_Project\add1By0\bin\AForge.Video.dll
+G:\adda1by0_Project\add1By0\bin\BouncyCastle.Crypto.dll
+G:\adda1by0_Project\add1By0\bin\Emgu.CV.Platform.NetStandard.dll
+G:\adda1by0_Project\add1By0\bin\Google.Protobuf.dll
+G:\adda1by0_Project\add1By0\bin\K4os.Compression.LZ4.dll
+G:\adda1by0_Project\add1By0\bin\K4os.Compression.LZ4.Streams.dll
+G:\adda1by0_Project\add1By0\bin\K4os.Hash.xxHash.dll
+G:\adda1by0_Project\add1By0\bin\Microsoft.Azure.KeyVault.Core.dll
+G:\adda1by0_Project\add1By0\bin\Microsoft.Azure.Storage.Common.dll
+G:\adda1by0_Project\add1By0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\adda1by0_Project\add1By0\bin\MySql.Data.dll
+G:\adda1by0_Project\add1By0\bin\Newtonsoft.Json.dll
+G:\adda1by0_Project\add1By0\bin\PaytmChecksum.dll
+G:\adda1by0_Project\add1By0\bin\System.Buffers.dll
+G:\adda1by0_Project\add1By0\bin\System.Memory.dll
+G:\adda1by0_Project\add1By0\bin\System.Numerics.Vectors.dll
+G:\adda1by0_Project\add1By0\bin\System.Runtime.CompilerServices.Unsafe.dll
+G:\adda1by0_Project\add1By0\bin\Ubiety.Dns.Core.dll
+G:\adda1by0_Project\add1By0\bin\Zstandard.Net.dll
+G:\adda1by0_Project\add1By0\bin\Renci.SshNet.dll
+G:\adda1by0_Project\add1By0\bin\AForge.xml
+G:\adda1by0_Project\add1By0\bin\AForge.Video.xml
+G:\adda1by0_Project\add1By0\bin\AForge.Video.DirectShow.xml
+G:\adda1by0_Project\add1By0\bin\Emgu.CV.Platform.NetStandard.xml
+G:\adda1by0_Project\add1By0\bin\Google.Protobuf.xml
+G:\adda1by0_Project\add1By0\bin\K4os.Compression.LZ4.xml
+G:\adda1by0_Project\add1By0\bin\K4os.Compression.LZ4.Streams.xml
+G:\adda1by0_Project\add1By0\bin\K4os.Hash.xxHash.xml
+G:\adda1by0_Project\add1By0\bin\Microsoft.Azure.KeyVault.Core.xml
+G:\adda1by0_Project\add1By0\bin\Microsoft.Azure.Storage.Common.xml
+G:\adda1by0_Project\add1By0\bin\MySql.Data.xml
+G:\adda1by0_Project\add1By0\bin\Newtonsoft.Json.xml
+G:\adda1by0_Project\add1By0\bin\System.Buffers.xml
+G:\adda1by0_Project\add1By0\bin\System.Memory.xml
+G:\adda1by0_Project\add1By0\bin\System.Numerics.Vectors.xml
+G:\adda1by0_Project\add1By0\bin\System.Runtime.CompilerServices.Unsafe.xml
+G:\adda1by0_Project\add1By0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\adda1by0_Project\add1By0\obj\Debug\add1By0.csprojAssemblyReference.cache
+G:\adda1by0_Project\add1By0\obj\Debug\add1By0.csproj.CoreCompileInputs.cache
+G:\adda1by0_Project\add1By0\obj\Debug\add1By0.csproj.CopyComplete
+G:\adda1by0_Project\add1By0\obj\Debug\add1By0.dll
+G:\adda1by0_Project\add1By0\obj\Debug\add1By0.pdb
