@@ -28,17 +28,139 @@
             padding-left:45px; 
             display:block;
         }
+
+        .discussion-back-chatbox {
+            margin: auto;
+    margin-top: 13px;
+    background-color: white;
+    width: 90%;
+    height: 99vh;
+    border-radius: 4px;
+        }
+
+        .otherMassages-charBox {
+    margin-left: 5px;
+    padding: 1px;
+    background-color: darkblue;
+    border-radius: 25px;
+    height: auto;
+    overflow: initial;
+    color: rgb(255, 243, 176);
+    font-size: 1rem;
+    font-weight: bolder;
+    width: 51%;
+}
+        .picofuser {
+    position: relative;
+    height: 84px;
+    width: 87px;
+    background: darkblue;
+    border-radius: 50px;
+    top: 6px;
+    left: 0px;
+    border: darkblue;
+    border-width: 2px;
+    border-style: solid;
+}
+        .heading-home.discussion {
+    color: darkblue;
+    font-size: 1.9rem;
+    text-align: center;
+    padding: 25px;
+    margin-bottom: -50px;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+        .msg {
+    background: white;
+    color: darkblue;
+    text-transform: capitalize;
+}
+        .username-chatbox {
+    display: inline-block;
+    float: left;
+    /* width: 300px; */
+    margin: 0px;
+    margin-left: 20px;
+    position: relative;
+    top: -26px;
+    left: 74px;
+    color: darkblue;
+}
+        ::-webkit-scrollbar-thumb {
+    background: darkblue;
+    border-radius: 10px;
+}
+        .sendmsg-chatbox {
+    display: inline-block;
+    float: left;
+    width: 75%;
+    height: 35px;
+    background-color: white;
+    margin-left: 5%;
+    /* border-radius: 10px; */
+    font-size: 1.2rem;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: darkblue;
+    border-radius: 10px;
+    color: darkblue;
+}
+        body{
+            background-color:darkblue;
+        }
+
+        .discussopn-postbtn-chatbox {
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: white;
+    color: darkblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+        .myuser-charBox {
+    margin-left: 54%;
+    padding: 1px;
+    background-color: darkblue;
+    border-radius: 25px;
+    height: auto;
+    overflow: initial;
+    color: white;
+    font-size: 1rem;
+    font-weight: bolder;
+    width: 44%;
+    opacity: 0.8;
+}
+        .mymsg {
+    margin-left: 20px;
+    margin: 5px;
+    margin-top: 2px;
+    clear: both;
+    padding-top: 15px;
+    background: white;
+    color: darkblue;
+    border-radius: 15px;
+    padding-left: 45px;
+    display: block;
+    text-transform: capitalize;
+}
+
+
     </style>
         <% if (IsMobileBrowser() == true)
             { %>
     <style>
         .msgTime-chatBox {
     display: inline-block;
-    width: 200px;
-    float: right;
+    width:100%;
     margin: 0px;
-    margin-left: 20px;
     font-size: 2rem;
+    text-align: center;;
     
 
 }
@@ -124,7 +246,7 @@
     position: fixed;
 }
         h3{
-                font-size: 4rem;
+                font-size: 2.5rem;
     text-transform: capitalize;
         }
         h4 {
@@ -136,6 +258,11 @@
             width: auto;
             margin: 0px;
             margin-left: 20px;
+            position: relative;
+    top: -72px;
+    color: darkblue;
+    left: 116px;
+    font-size:2.1rem;   
         }
 
         body{
@@ -225,6 +352,16 @@
     display: block;
     text-transform: capitalize;
 }
+        .discussion-back-chatbox {
+    margin: auto;
+    margin-top: 3px;
+    background-color: white;
+    width: 90%;
+    height: 90vh;
+    border-radius: 4px;
+}
+
+
         
     </style>
     <%} %>
@@ -248,7 +385,7 @@
     </script>
     <title></title>
 </head>
-<body onload="Javascrip:AutoRefreshPage(555000);">
+<body onload="Javascrip:AutoRefreshPage(600000000);">
 
 
 
@@ -266,14 +403,13 @@
             
      <% if (IsMobileBrowser() == true)
                 { %>
-     <a href="web_pages/homepage.aspx?Name=<%=Get_useremail %>"><lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_lnlbyoqx.json"  background="transparent"  speed="0.75"  style="width:181px;height:185px;margin-right:50px;display:inline-block;float:left;"  loop  autoplay></lottie-player></a>
+     <a href="web_pages/homepage.aspx?Name=<%=Get_useremail %>"><lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_lnlbyoqx.json"  background="transparent"  speed="0.75"  style="width:181px;height:185px;margin-right:50px;display:inline-block;float:left;width:67%;height:60%"  loop  autoplay></lottie-player></a>
            
            <%} %>
 
             <% if (IsMobileBrowser() == false)
                 { %>
-             <a href="web_pages/homepage.aspx?Name=<%=Get_useremail %>"><img style="float:left; height: 83px;width: 80px;margin-left: 12px;" src="images/home-512.png" /></a>
-          <%} %>
+           <a href="web_pages/homepage.aspx?Name=<%=Get_useremail %>"><lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_lnlbyoqx.json"  background="transparent"  speed="0.75"  style="width:181px;height:116px;margin-right:50px;display:inline-block;float:left;"  loop  autoplay></lottie-player></a>     <%} %>
 
 
              

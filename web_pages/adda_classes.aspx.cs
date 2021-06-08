@@ -13,7 +13,7 @@ namespace add1By0.web_pages
 {
     public partial class adda_classes : System.Web.UI.Page
     {
-
+        string adda1by0_databasename = "adda1by0";
         public String DEMOe = "";
         public string status = "";
         public string userEmail = "";
@@ -45,7 +45,7 @@ namespace add1By0.web_pages
 
             // getting vedios info
             conn.Open();
-            MySqlCommand cmd2 = new MySqlCommand("select distinct lessons from adda1by0." + classNo + " where subject='" + subject_name + "';", conn);
+            MySqlCommand cmd2 = new MySqlCommand("select distinct lessons from "+ adda1by0_databasename + "." + classNo + " where subject='" + subject_name + "';", conn);
             var rdr = cmd2.ExecuteReader();
             while (rdr.Read())
             {
@@ -59,7 +59,7 @@ namespace add1By0.web_pages
             {
 
 
-                cmd2 = new MySqlCommand("select distinct topics from adda1by0." + classNo + " where subject='" + subject_name + "' and lessons='" + subject_lessons[i] + "' ;", conn);
+                cmd2 = new MySqlCommand("select distinct topics from "+ adda1by0_databasename + "." + classNo + " where subject='" + subject_name + "' and lessons='" + subject_lessons[i] + "' ;", conn);
                 rdr = cmd2.ExecuteReader();
                 int countTopics = 0;
                 while (rdr.Read())
@@ -76,7 +76,7 @@ namespace add1By0.web_pages
 
             for (int i = 0; i < SubjectTopics.Count; i++)
             {
-                cmd2 = new MySqlCommand("select distinct contentVideo from adda1by0." + classNo + " where subject='" + subject_name + "'and topics='" + SubjectTopics[i] + "' ;", conn);
+                cmd2 = new MySqlCommand("select distinct contentVideo from "+ adda1by0_databasename + "." + classNo + " where subject='" + subject_name + "'and topics='" + SubjectTopics[i] + "' ;", conn);
                 rdr = cmd2.ExecuteReader();
                 var countVideos = 0;
                 while (rdr.Read())
@@ -142,7 +142,7 @@ namespace add1By0.web_pages
 
 
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select distinct subject from adda1by0." + classNo + ";", conn);
+                MySqlCommand cmd = new MySqlCommand("select distinct subject from "+ adda1by0_databasename + "." + classNo + ";", conn);
                 var rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
@@ -150,7 +150,7 @@ namespace add1By0.web_pages
                 }
                 rdr.Close();
 
-                MySqlCommand cmd1 = new MySqlCommand("select distinct lessons from adda1by0." + classNo + ";", conn);
+                MySqlCommand cmd1 = new MySqlCommand("select distinct lessons from "+ adda1by0_databasename + "." + classNo + ";", conn);
                 rdr = cmd1.ExecuteReader();
                 while (rdr.Read())
                 {
@@ -287,7 +287,7 @@ namespace add1By0.web_pages
                 vedioLinkStr = vedioLink.Text.ToString();
 
                 conn.Open();
-                MySqlCommand cmd1 = new MySqlCommand("insert into adda1by0." + classNo + " values('" + subject + "','" + lesson + "','" + topicStr + "','" + vedioLinkStr + "');", conn);
+                MySqlCommand cmd1 = new MySqlCommand("insert into "+ adda1by0_databasename + "." + classNo + " values('" + subject + "','" + lesson + "','" + topicStr + "','" + vedioLinkStr + "');", conn);
                 var r = cmd1.ExecuteNonQuery();
                 conn.Close();
                 Response.Write("<script LANGUAGE='JavaScript' >confirm('All Enteries are correct. Now going for Database.')</script>");

@@ -16,12 +16,13 @@ namespace add1By0.web_pages
 {
     public partial class sponsership : System.Web.UI.Page
     {
+        string adda1by0_databasename = "adda1by0";
         MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         public ArrayList namesOfSponsers = new ArrayList();
         protected void Page_Load(object sender, EventArgs e)
         {
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand("select * from adda1by0.sponsership;", conn);
+            MySqlCommand cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".sponsership;", conn);
             var rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {

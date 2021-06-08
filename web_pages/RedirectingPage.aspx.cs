@@ -15,6 +15,7 @@ namespace add1By0.web_pages
 {
     public partial class RedirectingPage : System.Web.UI.Page
     {
+        string adda1by0_databasename = "db_a6f987_bhupind";
         public string namee = "";
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,7 +27,7 @@ namespace add1By0.web_pages
             name.Text = useremail;
             MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand("select * from adda1by0.registration where email='" + useremail + "';", conn);
+            MySqlCommand cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".registration where email='" + useremail + "';", conn);
             var rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
@@ -39,7 +40,7 @@ namespace add1By0.web_pages
             }
             else
             {
-                MySqlCommand cmd1 = new MySqlCommand("select * from adda1by0.login_admins where email='" + useremail + "';", conn);
+                MySqlCommand cmd1 = new MySqlCommand("select * from "+ adda1by0_databasename + ".login_admins where email='" + useremail + "';", conn);
                 rdr = cmd1.ExecuteReader();
                 while (rdr.Read())
                 {

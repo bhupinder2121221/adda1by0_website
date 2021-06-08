@@ -13,6 +13,7 @@ namespace add1By0.web_pages
 {
     public partial class checkout_redirectingPage : System.Web.UI.Page
     {
+		string adda1by0_databasename = "adda1by0";
 		MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
 		protected void Page_Load(object sender, EventArgs e)
         {
@@ -42,11 +43,11 @@ namespace add1By0.web_pages
 				{
 					h1Message.InnerText = "Your payment is success";
 					conn.Open();
-					MySqlCommand cmd = new MySqlCommand("UPDATE `adda1by0`.`registration` SET `fees` = 'true' WHERE (`email` = '" + email + "');", conn);
+					MySqlCommand cmd = new MySqlCommand("UPDATE `"+ adda1by0_databasename + "`.`registration` SET `fees` = 'true' WHERE (`email` = '" + email + "');", conn);
 					cmd.ExecuteNonQuery();
 					conn.Close();
 					conn.Open();
-					cmd = new MySqlCommand("insert into adda1by0.payments values('"+email+"','"+txnId+"','"+orderId+"','"+amount+"','"+dateOfTransection+"','"+timeOfTransection+"');", conn);
+					cmd = new MySqlCommand("insert into "+ adda1by0_databasename + ".payments values('"+email+"','"+txnId+"','"+orderId+"','"+amount+"','"+dateOfTransection+"','"+timeOfTransection+"');", conn);
 					cmd.ExecuteNonQuery();
 					conn.Close();
 					Response.Redirect("premiumMembership.aspx?Name="+email+"&status=TygUdgnhftnk4841nN");

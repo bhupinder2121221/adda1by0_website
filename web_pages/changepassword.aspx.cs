@@ -9,6 +9,7 @@ namespace add1By0.web_pages
 {
     public partial class changepassword : System.Web.UI.Page
     {
+        string adda1by0_databasename = "adda1by0";
         protected void Page_Load(object sender, EventArgs e)
         {
             

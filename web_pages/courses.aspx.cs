@@ -15,6 +15,7 @@ namespace add1By0.web_pages
 {
     public partial class courses : System.Web.UI.Page
     {
+        string adda1by0_databasename = "adda1by0";
         public string uid = "";
         bool postback = false;
         ArrayList priliminary_classes = new ArrayList();
@@ -59,7 +60,7 @@ namespace add1By0.web_pages
 
 
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand("select * from adda1by0.courses;", conn);
+            MySqlCommand cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".courses;", conn);
             var rdr = cmd.ExecuteReader();
             var Count = 0;
             while (rdr.Read())

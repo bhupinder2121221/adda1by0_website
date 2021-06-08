@@ -83,7 +83,7 @@
 .class11:hover,.secondary-class-box {
     background-color: red;
     transform-origin: left;
-    transform: rotateY(-101deg);
+    transform: rotateY(-47px);
 }
 .class-box-heading {
     display:block;

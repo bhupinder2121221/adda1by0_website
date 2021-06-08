@@ -15,7 +15,7 @@ namespace add1By0
 {
     public partial class Adding_Streaming : System.Web.UI.Page
     {
-
+        string adda1by0_databasename = "adda1by0";
         MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
 
         String username = "";
@@ -29,7 +29,7 @@ namespace add1By0
         protected void golive_Click(object sender, EventArgs e)
         {
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand("insert into adda1by0.courses values('"+topicName_box.Text+"','paid','extra','"+timeBox.Text+"','"+dateBox.Text+"');", conn);
+            MySqlCommand cmd = new MySqlCommand("insert into "+ adda1by0_databasename + ".courses values('"+topicName_box.Text+"','paid','extra','"+timeBox.Text+"','"+dateBox.Text+"');", conn);
             
             cmd.ExecuteNonQuery();
             Response.Write("<script LANGUAGE='JavaScript' >alert('Live Lecture recorded into database !')</script>");

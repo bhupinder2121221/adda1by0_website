@@ -1,15 +1,16 @@
 ﻿body {
 }
 .backpage {
-    opacity:0.5;
-    background: url('../../images/pexels-giftpunditscom-2072168.jpg');
-    background-size:cover;
+    opacity: 0.5;
+    background: url("../../images/00966 Vintage Line Break Elements.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .letter {
     width: 50%;
     border-radius:15px;
     height: 95%;
-    background: url('../../images/page.jpg');
+    
     margin: auto;
     transform: translateY(10px);
 }
@@ -22,7 +23,7 @@
 }
 .name {
     text-align: center;
-    color: white;
+    color: darkblue;
     letter-spacing: 1px;
 }
 .namesspace {

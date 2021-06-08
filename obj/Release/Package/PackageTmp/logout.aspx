@@ -4,6 +4,14 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <script runat="server">
+        void Page_Load(object sender, EventArgs e)
+        {
+            deleteallsessions();
+            Response.Redirect("web_pages/homepage.aspx");
+        }
+
+    </script>
     <title></title>
 </head>
 <body>

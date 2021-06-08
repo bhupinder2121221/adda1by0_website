@@ -15,6 +15,7 @@ namespace add1By0
 {
     public partial class discussion_chatBox : System.Web.UI.Page
     {
+        string adda1by0_databasename = "adda1by0";
         string msgtobesend = "";
         ArrayList msges = new ArrayList();
         ArrayList createdTime = new ArrayList();
@@ -48,7 +49,7 @@ namespace add1By0
             usernameHiddenField.Value = username;
 
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand("select * from adda1by0.chatbox" + chatTableName + "; ", conn);
+            MySqlCommand cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".chatbox" + chatTableName + "; ", conn);
             var rdr = cmd.ExecuteReader();
             var count = 0;
             while (rdr.Read()) 
@@ -83,7 +84,7 @@ namespace add1By0
 
                 conn.Open();
 
-                MySqlCommand cmd = new MySqlCommand("insert into adda1by0.chatbox" + chatTableName + " values('" + sendMsg_chatBox.Text + "','" + username + "','" + System.DateTime.Now.ToString() + "'); ", conn);
+                MySqlCommand cmd = new MySqlCommand("insert into "+ adda1by0_databasename + ".chatbox" + chatTableName + " values('" + sendMsg_chatBox.Text + "','" + username + "','" + System.DateTime.Now.ToString() + "'); ", conn);
                 var rdr = cmd.ExecuteNonQuery();
 
 

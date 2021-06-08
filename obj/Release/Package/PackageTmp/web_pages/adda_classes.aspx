@@ -5,7 +5,8 @@
 <asp:Content ID="links" ContentPlaceHolderID="linker" runat="server">
     <link rel="stylesheet" href="../App_Themes/css/classes.css" />
     <link rel="stylesheet" href="../App_Themes/css/aboutPage.css" />
-    
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 </asp:Content>
 
 
@@ -13,39 +14,48 @@
 
 
 <asp:Content ID="classesback" ContentPlaceHolderID="fullWorkSpace"  runat="server">
-  
+  <asp:HiddenField ID="lesson" runat="server" />
+    <asp:HiddenField ID="topicnumber" runat="server" />
     <div class="background">
-        <div class="arrows" id="arrowLeft-subjects" onclick="LeftArrow()" >
-                <h1 class="arrow-text"  >></h1>
-            </div>
-            <div class="arrows right" onclick="RightArrow()" >
-                <h1 class="arrow-text"><</h1>
-            </div>
         
-        <div class="subjects" id="subject-back"  >
+        <div class="container-md" style="margin-top:15px;">
+       <div class="carousel carousell"  data-flickity>
+  
 
-            
-            
-            <% for (int i = 0; i < subjectsOfclass.Count; i++)
+           <% for (int i = 0; i < subjectsOfclass.Count; i++)
                 { %>
             <%if (i % 2 == 0)
                 { %>
-            <div class="subjects-inlineblocks" id="<%=i %>" style="height: 100%;width: 300px;margin-right: 5px;display: inline-block; color: rgb(84, 8, 4); float: left;"  onclick="seclectingSubject(<%=i %>,'<%=classNo %>','<%=userEmail %>','<%=status %>')">
-                <h1 class="subject-pane-text"><%= subjectsOfclass[i] %></h1>
-            </div>
+           <div class="carousel-cell" id="<%=i %>" onclick="seclectingSubject(<%=i %>,'<%=classNo %>','<%=userEmail %>','<%=status %>')">
+      <div class="container-sm">
+          <h1 class="subject-slides"  ><%= subjectsOfclass[i] %></h1>
+      </div>
+        </div>
+            
             <%} %>
 
             <% if (i % 2 != 0)
                 { %>
-             <div class="subjects-inlineblocks alternative" id="<%=i %>" style="height: 100%;width: 300px;margin-right: 5px;display: inline-block; color:rgb(49, 59, 114); float: left;" onclick="seclectingSubject(<%=i %>,'<%=classNo %>','<%=userEmail %>','<%=status %>')">
-                <h1 class="subject-pane-text"><%= subjectsOfclass[i] %></h1>
-            </div>
+               <div class="carousel-cell" id="<%=i %>" onclick="seclectingSubject(<%=i %>,'<%=classNo %>','<%=userEmail %>','<%=status %>')">
+                  <div class="container-sm">
+                         <h1 class="subject-slides" style="background:yellow" ><%= subjectsOfclass[i] %></h1>
+                  </div>
+               </div>
+
+            
             <% } %>
 
             <% } %>
              
-        
-        </div>
+  </div>
+    </div>
+
+
+        <br />
+        <br />
+
+      
+
         <h1 class="heading-home" style="font-family: 'Stylish', sans-serif;text-align:center; font-size:2.9rem; color:purple;"> Class 1st </h1>
         <div class="barline-home" style="margin-top:-50px;"></div>
        <asp:Panel ID="addItem_panel" runat="server">
@@ -91,59 +101,97 @@
            </asp:Panel>
 
         <asp:Panel ID="classPanel" runat="server">
-        <div class="classView">
+        <div class="classView" style="padding-bottom:47px">
             <h1 class="heading "><%=subjectName.ToUpper() %> : </h1>
-            <div class="vedio-pane">
-                <div class="index-pane">
+            <div class="container-md" >
+                <div class="row">
+                      <div class="col-lg">
+                <div class="container-md" style=" height:500px;   background: grey;    margin-bottom: 19px;">
+                    <h1 style="z-index:0; position: absolute;font-size: 1.5rem;text-align: center; margin-top: 10%; color: white;">Select a topic from index.</h1>
+                    <iframe style="z-index:2;" width="100%" height="100%" src="<%=videoUrl %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                </div>
+                        </div>
+                    <div class="col-sm">
+                <div class="container-md" style=" overflow:scroll;max-height:500px; padding: 10px;background: white;border-radius: 12px;    box-shadow: 4px 4px;">
+                   <h1>Index</h1>
                     <% int current_Topic = 0; %>
                     <% int current_vedioContent = 0; %>
                     <% for (int i = 0; i < subject_lessons.Count; i++)
                         { %>
                         <% int numberOfTopic = Convert.ToInt32(NumberOfTopicsOfLesson[i]); %>
-                            <div class="lessons" style="transition:all ease-in 1s;">
-                               <div  onclick="expandLessons(<%=i %>)"> <h2 style="cursor:pointer; text-align:left"><%=subject_lessons[i] %></h2></div>
-                                <div class="lesson-sub" id="lesson<%=i %>"  style="margin-top:10px; cursor:pointer; overflow:hidden;height:0px; transition:all ease-in 1s;">
-                                <%for (int o = 0; o < numberOfTopic; o++,current_Topic++)
+                   
+                    <div class="accordion" id="accordionExampleparent">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOneparent<%=i %>">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneparrent<%=i %>" aria-expanded="true" aria-controls="collapseOneparrent<%=i %>">
+                          <h2 style="cursor:pointer;font-size:1rem; text-align:left"><%=subject_lessons[i] %></h2>
+                          </button>
+                        </h2>
+                        <div id="collapseOneparrent<%=i %>" class="accordion-collapse collapse show" aria-labelledby="headingOneparent<%=i %>" data-bs-parent="#accordionExampleparent">
+                          <div class="accordion-body">
+                               <%for (int o = 0; o < numberOfTopic; o++,current_Topic++)
                                     { %>
-                                   <div  onclick="expandContractVediosLink(<%=Convert.ToString(current_vedioContent) %>)">
-                                       <h3 class="topics-style" style="height:25px; "><%=SubjectTopics[current_Topic] %></h3>
-
-                                   </div>
-
-                                    <% int NumberOfVediosContentInOneTopic = Convert.ToInt32(VedioLectures_NumberOf_topic[current_Topic]); %>
-                                    <div id="vedioPart<%=current_vedioContent %>" class="videos-style" style="height:25px;cursor:pointer;height:0px; color:darkblue; margin-right:5px; overflow:hidden;">
-                                    <% for (int p = 0; p < NumberOfVediosContentInOneTopic; p++,current_vedioContent++)
+                              <div class="accordion" id="accordionExamplesubparent<%=o %><%=i %>">
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" style="font-size:1rem;" id="headingOnesubparent<%=o %><%=i %>">
+                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnesubparent<%=o %><%=i %>" aria-expanded="true" aria-controls="collapseOnesubparent<%=o %><%=i %>">
+                                        <h3 class="topics-style" style="height:25px; font-size:1rem; "><%=SubjectTopics[current_Topic] %></h3>
+                                      </button>
+                                    </h2>
+                                    <div id="collapseOnesubparent<%=o %><%=i %>" class="accordion-collapse collapse show" aria-labelledby="headingOnesubparent<%=o %><%=i %>" data-bs-parent="#accordionExamplesubparent<%=o %><%=i %>">
+                                      <div class="accordion-body">
+                                           <% int NumberOfVediosContentInOneTopic = Convert.ToInt32(VedioLectures_NumberOf_topic[current_Topic]); %>
+                                           <% for (int p = 0; p < NumberOfVediosContentInOneTopic; p++,current_vedioContent++)
                                         { %>
-                                        <div onclick="playTheVedio('<%= vedioLinksOf_Subject[current_vedioContent] %>','<%= backView %>','<%=classNo %>','<%=userEmail %>','<%=status %>')">
-                                        <h3 style="text-align:right;" >Vedio Part <%=p %></h3>
+                                           <div style="height:35px" onclick="playTheVedio('<%= vedioLinksOf_Subject[current_vedioContent] %>','<%= backView %>','<%=classNo %>','<%=userEmail %>','<%=status %>'),'<%=i %>','<%=o %>'">
+                                        <h3 style="text-align:right;cursor:pointer; font-size:1rem;" >Vedio Part <%=p %></h3>
                                         </div>
-                                        <br />
-                                    
-                                    <%} %>
-                                </div>
-                                <br />
-                                <%} %>
+                                           <%} %>
+
+                                        </div>
                                     </div>
-                                
-                            </div>
-                            <br />
-                    <%} %>
-                </div>
-                <div class="video-back">
-                    <iframe width="100%" height="100%" src="<%=videoUrl %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                  </div>
+
+                             </div>
+                                <%} %>
+
+                        </div>
+                      </div>
+
+                    </div>
+                        
+                        </div>
+                     <%} %>
+
+
+
+
+
+
+
+                    </div>
+                   </div>
+                  
+                    
+                     </div>
 
                 </div>
             </div>
-
-        </div>
             </asp:Panel>
         <asp:Panel ID="welcome" runat="server">
             <br />
             <br />
-            <h1 class="welcome-text"> Welcome !</h1>
-            <h1 class="select-text"> Select A Subject</h1>
+            <div class="container-sm">
+            <h1 class="welcome-text " style="    font-size: 4rem;letter-spacing:0.1rem;"> Welcome !</h1>
+            <h1 class="select-text " style="    font-size: 4rem; "> Select A Subject</h1>
+                </div>
         </asp:Panel>
 
     </div>
        <script type="text/javascript" src="../classes_js.js"></script>
+    <script type="text/javascript">
+        console.log("here is current link");
+        console.log(document.getElementById('<%=lesson.ClientID %>').value);
+    </script>
  </asp:Content>

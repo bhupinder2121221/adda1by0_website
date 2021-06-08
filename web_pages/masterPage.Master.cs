@@ -10,11 +10,13 @@ using System.Configuration;
 using System.Net;
 using System.Net.Mail;
 using System.Net.Http;
+using System.IO;
 
 namespace add1By0.web_pages
 {
     public partial class Site1 : System.Web.UI.MasterPage
     {
+        string adda1by0_databasename = "adda1by0";
         MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         String codeSentToEmail = "";
         Random ran = new Random();
@@ -33,7 +35,7 @@ namespace add1By0.web_pages
 
             string picpath = "";
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand("SELECT * FROM adda1by0.registration where email='"+get_emailId.ToUpper()+"';", conn);
+            MySqlCommand cmd = new MySqlCommand("SELECT * FROM "+ adda1by0_databasename + ".registration where email='"+get_emailId.ToUpper()+"';", conn);
             var r = cmd.ExecuteReader();
             while (r.Read())
             {
@@ -59,9 +61,11 @@ namespace add1By0.web_pages
                 MailMessage message = new MailMessage();
                 SmtpClient smtp = new SmtpClient();
                 message.From = new MailAddress("bhupinder292000@gmail.com");
-                message.To.Add(new MailAddress("bhupinder2121221@gmail.com"));
+                message.To.Add(new MailAddress(get_emailId.ToString()));
                 message.Subject = "Adda1by0 | Request for Change Password";
                 message.IsBodyHtml = true; //to make message body as html  
+               
+
                 message.Body = "<h1>Adda1by0</h1><br>" +
                     "<h3>Hello,</h3>" +
                     "<h3>You have requested for the password change" +
@@ -111,7 +115,7 @@ namespace add1By0.web_pages
                 {
 
 
-                    MySqlCommand cmd = new MySqlCommand("update adda1by0.registration set password='" + newpassword + "' where email='" + userName.Text + "';", conn);
+                    MySqlCommand cmd = new MySqlCommand("update "+ adda1by0_databasename + ".registration set password='" + newpassword + "' where email='" + userName.Text + "';", conn);
                     cmd.ExecuteNonQuery();
 
                     Response.Write("<script LANGUAGE='JavaScript' >alert('Password Changed')</script>");

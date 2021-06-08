@@ -10,18 +10,21 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Configuration;
 using System.Collections;
-
+using System.IO;
 namespace add1By0.web_pages
 {
     public partial class aboutPage : System.Web.UI.Page
     {
+       
+         
+        string adda1by0_databasename = "adda1by0";
         public ArrayList questionsFAQ = new ArrayList();
         public ArrayList answersFAQ = new ArrayList();
         MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         protected void Page_Load(object sender, EventArgs e)
         {
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand(" select * from adda1by0.questions_in_about;", conn);
+            MySqlCommand cmd = new MySqlCommand(" select * from "+ adda1by0_databasename + ".questions_in_about;", conn);
             var rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {

@@ -12,6 +12,7 @@ namespace add1By0
 {
     public partial class logout : System.Web.UI.Page
     {
+        string adda1by0_databasename = "adda1by0";
         void removePrevCookies()
         {
             HttpCookie temp = Request.Cookies["Adda1By0_cookies"];
@@ -46,7 +47,7 @@ namespace add1By0
 
                 MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("delete from adda1by0.currentusers where email='" + str + "';", conn);
+                MySqlCommand cmd = new MySqlCommand("delete from "+ adda1by0_databasename + ".currentusers where email='" + str + "';", conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 logouttext.Text = "Successfully Logout";

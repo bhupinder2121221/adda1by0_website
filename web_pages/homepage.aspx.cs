@@ -15,7 +15,7 @@ namespace add1By0.web_pages
 {
     public partial class homepage : System.Web.UI.Page
     {
-        
+        string adda1by0_databasename = "adda1by0";
         MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         
         public string useremail = "";

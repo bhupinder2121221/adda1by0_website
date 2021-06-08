@@ -15,6 +15,7 @@ namespace add1By0.web_pages
 {
     public partial class profile : System.Web.UI.Page
     {
+        string adda1by0_databasename = "adda1by0";
         MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
 
         public string nameOfUser = "";
@@ -62,7 +63,7 @@ namespace add1By0.web_pages
             if (LoginAS == "student")
             {
                 conn.Open();
-               MySqlCommand cmd1 = new MySqlCommand("select * from adda1by0.registration where email='" + nameOfUser + "';", conn);
+               MySqlCommand cmd1 = new MySqlCommand("select * from "+ adda1by0_databasename + ".registration where email='" + nameOfUser + "';", conn);
                 var rdr = cmd1.ExecuteReader();
                 string found = "Not founded";
                 while (rdr.Read())
@@ -211,7 +212,7 @@ namespace add1By0.web_pages
             string pathtosavefile = "~/App_Themes/User_uploaded_Pics/" + useremail  + Path.GetExtension(upload_pics.PostedFile.FileName).ToLower();
             upload_pics.PostedFile.SaveAs(Server.MapPath(pathtosavefile));
             conn.Open();
-            MySqlCommand cmd1 = new MySqlCommand("update 229952.registration set firstname='" + textbox1.Text.ToString()+"', class='"+classBox.SelectedValue.ToString()+"',age='"+textbox2.Text.ToString()+"',phno='"+textbox3.Text.ToString()+ "',uploadedImg='"+pathtosavefile+"'  where email='karan@gmail.com';", conn);
+            MySqlCommand cmd1 = new MySqlCommand("update "+ adda1by0_databasename + ".registration set firstname='" + textbox1.Text.ToString()+"', class='"+classBox.SelectedValue.ToString()+"',age='"+textbox2.Text.ToString()+"',phno='"+textbox3.Text.ToString()+ "',uploadedImg='"+pathtosavefile+"'  where email='karan@gmail.com';", conn);
             cmd1.ExecuteNonQuery();
             Response.Write("<script LANGUAGE='JavaScript'>alert('Profile Successfuly Updated !')</script>");
             conn.Close();

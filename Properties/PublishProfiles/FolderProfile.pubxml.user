@@ -4,7 +4,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>E:\adda1by0_phase_3</_PublishTargetUrl>
+    <_PublishTargetUrl>E:\adda1by0_for hosting\published</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Adding_Streaming.aspx">
@@ -23,16 +23,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/29/2020 12:46:30</publishTime>
     </File>
     <File Include="App_Themes/css/aboutPage.css">
-      <publishTime>12/30/2020 17:50:40</publishTime>
+      <publishTime>01/30/2021 11:21:03</publishTime>
+    </File>
+    <File Include="App_Themes/css/changepassword.css">
+      <publishTime>01/31/2021 11:49:44</publishTime>
     </File>
     <File Include="App_Themes/css/classes.css">
-      <publishTime>11/05/2020 12:12:18</publishTime>
+      <publishTime>02/01/2021 11:06:08</publishTime>
     </File>
     <File Include="App_Themes/css/courses.css">
-      <publishTime>12/30/2020 16:42:29</publishTime>
+      <publishTime>02/01/2021 09:57:57</publishTime>
     </File>
     <File Include="App_Themes/css/discussion.css">
-      <publishTime>11/26/2020 22:37:09</publishTime>
+      <publishTime>02/03/2021 11:37:29</publishTime>
     </File>
     <File Include="App_Themes/css/homePage.css">
       <publishTime>01/01/2021 19:04:40</publishTime>
@@ -44,16 +47,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/03/2021 19:10:11</publishTime>
     </File>
     <File Include="App_Themes/css/masterpage.css">
-      <publishTime>12/30/2020 11:54:53</publishTime>
+      <publishTime>02/02/2021 10:52:32</publishTime>
     </File>
     <File Include="App_Themes/css/premiumMembership.css">
       <publishTime>11/23/2020 22:17:19</publishTime>
     </File>
     <File Include="App_Themes/css/profile.css">
-      <publishTime>12/02/2020 17:48:50</publishTime>
+      <publishTime>01/30/2021 17:06:10</publishTime>
     </File>
     <File Include="App_Themes/css/sponsership.css">
-      <publishTime>12/02/2020 21:40:13</publishTime>
+      <publishTime>01/30/2021 17:32:14</publishTime>
     </File>
     <File Include="App_Themes/models/face_expression_model-shard1">
       <publishTime>10/20/2020 17:49:59</publishTime>
@@ -95,10 +98,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/15/2020 13:25:19</publishTime>
     </File>
     <File Include="bin/add1By0.dll">
-      <publishTime>01/05/2021 13:32:09</publishTime>
+      <publishTime>02/15/2021 12:56:51</publishTime>
     </File>
     <File Include="bin/add1By0.pdb">
-      <publishTime>01/05/2021 13:32:09</publishTime>
+      <publishTime>02/15/2021 12:56:51</publishTime>
     </File>
     <File Include="bin/AForge.dll">
       <publishTime>07/17/2013 23:15:16</publishTime>
@@ -452,13 +455,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/29/2020 16:50:04</publishTime>
     </File>
     <File Include="classes_js.js">
-      <publishTime>11/06/2020 22:01:44</publishTime>
+      <publishTime>02/01/2021 12:41:37</publishTime>
     </File>
     <File Include="discussion.aspx">
-      <publishTime>12/30/2020 18:29:28</publishTime>
+      <publishTime>02/04/2021 12:11:10</publishTime>
     </File>
     <File Include="discussion_chatBox.aspx">
-      <publishTime>12/30/2020 18:39:12</publishTime>
+      <publishTime>02/04/2021 12:13:54</publishTime>
     </File>
     <File Include="discussion_javascript.js">
       <publishTime>10/30/2020 12:21:14</publishTime>
@@ -475,8 +478,14 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="flex.js">
       <publishTime>09/26/2020 23:16:06</publishTime>
     </File>
+    <File Include="images/00966 Vintage Line Break Elements.svg">
+      <publishTime>01/30/2021 17:24:03</publishTime>
+    </File>
     <File Include="images/1067_delete_Cancel_close_cross-512.png">
       <publishTime>10/22/2020 13:23:55</publishTime>
+    </File>
+    <File Include="images/1542594957.svg">
+      <publishTime>01/30/2021 17:35:50</publishTime>
     </File>
     <File Include="images/adda1by0.png">
       <publishTime>01/03/2021 18:57:19</publishTime>
@@ -489,6 +498,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="images/arrow.png">
       <publishTime>09/20/2020 10:29:45</publishTime>
+    </File>
+    <File Include="images/background-1297485.svg">
+      <publishTime>01/30/2021 12:26:28</publishTime>
     </File>
     <File Include="images/backgrounf.svg">
       <publishTime>01/03/2021 18:36:13</publishTime>
@@ -523,6 +535,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="images/extraclassespic2.PNG">
       <publishTime>11/24/2020 13:08:23</publishTime>
     </File>
+    <File Include="images/floral-1751088.svg">
+      <publishTime>01/30/2021 12:24:07</publishTime>
+    </File>
     <File Include="images/geteveryResource-home-.jpg">
       <publishTime>10/03/2020 09:39:59</publishTime>
     </File>
@@ -549,6 +564,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="images/learn-online-home.jpg">
       <publishTime>10/03/2020 09:39:59</publishTime>
+    </File>
+    <File Include="images/loadingsvg.svg">
+      <publishTime>01/30/2021 11:31:17</publishTime>
     </File>
     <File Include="images/login.jpg">
       <publishTime>09/12/2020 23:26:01</publishTime>
@@ -613,6 +631,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="images/si6.png">
       <publishTime>09/26/2020 22:10:45</publishTime>
     </File>
+    <File Include="images/Stacked Wave.svg">
+      <publishTime>01/31/2021 11:38:22</publishTime>
+    </File>
     <File Include="images/team-member-1.jpg">
       <publishTime>09/26/2020 22:53:01</publishTime>
     </File>
@@ -628,6 +649,12 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="images/topteacher-home.jpg">
       <publishTime>10/03/2020 09:39:59</publishTime>
     </File>
+    <File Include="images/user.svg">
+      <publishTime>01/30/2021 16:46:09</publishTime>
+    </File>
+    <File Include="images/Wave-10s-1536px.svg">
+      <publishTime>01/31/2021 10:29:14</publishTime>
+    </File>
     <File Include="images/welsome.jpg">
       <publishTime>09/20/2020 11:12:34</publishTime>
     </File>
@@ -635,7 +662,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/07/2020 13:28:36</publishTime>
     </File>
     <File Include="logout.aspx">
-      <publishTime>10/13/2020 12:22:31</publishTime>
+      <publishTime>02/05/2021 10:33:55</publishTime>
     </File>
     <File Include="models/face_expression_model-shard1">
       <publishTime>10/16/2020 18:57:47</publishTime>
@@ -694,26 +721,32 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="setLiveStreaming.aspx">
       <publishTime>12/02/2020 16:21:03</publishTime>
     </File>
+    <File Include="startingpageOfWebsite.aspx">
+      <publishTime>02/13/2021 18:07:30</publishTime>
+    </File>
     <File Include="TextFile1.txt">
       <publishTime>01/03/2021 10:27:04</publishTime>
     </File>
     <File Include="userpane.js">
-      <publishTime>11/27/2020 11:38:22</publishTime>
+      <publishTime>01/31/2021 10:24:18</publishTime>
     </File>
     <File Include="validations_for_inputs.js">
       <publishTime>10/11/2020 17:09:24</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/05/2021 13:32:10</publishTime>
+      <publishTime>02/15/2021 12:56:53</publishTime>
     </File>
     <File Include="webcamClicking_picture.js">
       <publishTime>10/04/2020 17:16:38</publishTime>
     </File>
     <File Include="web_pages/aboutPage.aspx">
-      <publishTime>12/30/2020 17:50:47</publishTime>
+      <publishTime>01/30/2021 11:28:08</publishTime>
     </File>
     <File Include="web_pages/adda_classes.aspx">
-      <publishTime>11/06/2020 22:00:58</publishTime>
+      <publishTime>02/04/2021 13:17:30</publishTime>
+    </File>
+    <File Include="web_pages/changepassword.aspx">
+      <publishTime>02/03/2021 10:36:46</publishTime>
     </File>
     <File Include="web_pages/checkoutPage.aspx">
       <publishTime>11/22/2020 16:29:19</publishTime>
@@ -722,34 +755,34 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/23/2020 17:46:38</publishTime>
     </File>
     <File Include="web_pages/courses.aspx">
-      <publishTime>01/02/2021 19:14:27</publishTime>
+      <publishTime>02/03/2021 10:03:48</publishTime>
     </File>
     <File Include="web_pages/homepage.aspx">
       <publishTime>01/01/2021 18:46:08</publishTime>
     </File>
     <File Include="web_pages/loginPage.aspx">
-      <publishTime>01/03/2021 19:27:45</publishTime>
+      <publishTime>02/03/2021 11:27:52</publishTime>
     </File>
     <File Include="web_pages/Login_page.aspx">
       <publishTime>01/01/2021 18:54:24</publishTime>
     </File>
     <File Include="web_pages/masterPage.Master">
-      <publishTime>01/03/2021 19:34:31</publishTime>
+      <publishTime>02/05/2021 12:20:00</publishTime>
     </File>
     <File Include="web_pages/premiumMembership.aspx">
-      <publishTime>11/24/2020 09:34:14</publishTime>
+      <publishTime>02/03/2021 11:18:20</publishTime>
     </File>
     <File Include="web_pages/profile.aspx">
-      <publishTime>12/02/2020 17:38:51</publishTime>
+      <publishTime>01/30/2021 17:09:37</publishTime>
     </File>
     <File Include="web_pages/Redirecting.aspx">
-      <publishTime>11/07/2020 12:17:15</publishTime>
+      <publishTime>01/30/2021 12:15:39</publishTime>
     </File>
     <File Include="web_pages/signInPage.aspx">
-      <publishTime>01/03/2021 10:33:53</publishTime>
+      <publishTime>02/05/2021 10:48:12</publishTime>
     </File>
     <File Include="web_pages/sponsership.aspx">
-      <publishTime>12/02/2020 21:39:01</publishTime>
+      <publishTime>02/04/2021 13:01:03</publishTime>
     </File>
     <File Include="windowCloseEvent.js">
       <publishTime>11/27/2020 11:51:42</publishTime>

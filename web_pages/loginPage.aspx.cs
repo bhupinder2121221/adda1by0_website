@@ -18,6 +18,7 @@ namespace add1By0.web_pages
 {
     public partial class loginPage : System.Web.UI.Page
     {
+        string adda1by0_databasename = "adda1by0";
         public string focusto = "";
         public string filenameofPic = "";
         MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
@@ -75,7 +76,7 @@ namespace add1By0.web_pages
                     Response.Write("<script LANGUAGE='JavaScript' >console.log('Registration started!')</script>");
 
                     conn.Open();
-                    MySqlCommand cmd1 = new MySqlCommand("Insert into adda1by0.registration values('" + nameBox.Text.ToUpper()+"','"+ lastNameBox.Text.ToUpper() + "','"+ ageBox.Text + "','"+ classBox.SelectedValue.ToString() + "','"+ phnoBox.Text + "','"+ emailBox.Text.ToUpper() + "','"+ passwordBox.Text + "','"+imgName+"','null','false');", conn);
+                    MySqlCommand cmd1 = new MySqlCommand("Insert into "+ adda1by0_databasename + ".registration values('" + nameBox.Text.ToUpper()+"','"+ lastNameBox.Text.ToUpper() + "','"+ ageBox.Text + "','"+ classBox.SelectedValue.ToString() + "','"+ phnoBox.Text + "','"+ emailBox.Text.ToUpper() + "','"+ passwordBox.Text + "','"+imgName+"','null','false');", conn);
                     
                     cmd1.ExecuteNonQuery();
 
@@ -105,7 +106,7 @@ namespace add1By0.web_pages
                 {
                 
                     conn.Open();
-                    MySqlCommand cmd = new MySqlCommand("Insert into adda1by0.registration values(@FirstName,@LsName,@Age,@class,@phno,@email,@password,'',@uploadedImage,'false')", conn);
+                    MySqlCommand cmd = new MySqlCommand("Insert into "+ adda1by0_databasename + ".registration values(@FirstName,@LsName,@Age,@class,@phno,@email,@password,'',@uploadedImage,'false')", conn);
                     cmd.Parameters.AddWithValue("@FirstName", nameBox.Text.ToUpper());
                     cmd.Parameters.AddWithValue("@LsName", lastNameBox.Text.ToUpper());
                     cmd.Parameters.AddWithValue("@Age", ageBox.Text);
@@ -139,7 +140,7 @@ namespace add1By0.web_pages
        bool ifUser_email_already_present()
         {
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand("select * from adda1by0.registration where email='" + emailBox.Text.ToUpper() + "';", conn);
+            MySqlCommand cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".registration where email='" + emailBox.Text.ToUpper() + "';", conn);
             var rdr = cmd.ExecuteReader();
             int Count = 0;
             while (rdr.Read())

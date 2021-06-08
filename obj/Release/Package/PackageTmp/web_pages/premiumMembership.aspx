@@ -9,24 +9,32 @@
         
     <div>
        
-        <div class="backcover" >
-             <h1 class="heading_premium"> Get Your Premium Membership</h1>
-            <div class="portal" >
+        <div class="backcover" style="height: fit-content;">
+             <h1 class="heading_premium" style="font-size:3.9rem"> Get Your Premium Membership</h1>
+            <div class="portal" style="padding:0px;" >
                 <asp:Panel ID="NotSuccess" Width="100%" runat="server">
                     <h1 class="name">Hi! <%=nameOfUser.ToUpper() %></h1>
                     <br />
                     
 
-                    <div class="table" style="background-color:white; padding-top:0px;width:96%;">
+                    <div class="table" style="background-color:white; padding-top:0px;width:100%;">
   <div class="table-cell"></div>
   <div class="table-cell plattform" style="background-color: darkblue; color: wheat;">
+      <div class="row">
     <h3>Free Course</h3>
-    <a href="" style="margin-left:76px" class="btn">Sign Up</a>
+          </div>
+      <div class="row">
+    <a href="loginPage.aspx" style="color:white" class="btn">Sign Up</a>
   </div>
+      </div>
   <div class="table-cell enterprise" style="background-color: darkblue;color: wheat;">
+      <div class="row">
     <h3>Premium Membership</h3>
-    <a href="checkoutPage.aspx?Name=<%=email %>&phoneNo=<%=phoneNo %>" class="btn" style="margin-left:61px">Get Premium!</a>
+          </div>
+      <div class ="row">
+    <a href="checkoutPage.aspx?Name=<%=email %>&phoneNo=<%=phoneNo %>" class="btn" style="color:white">Get Premium!</a>
   </div>
+      </div>
   <div class="table-cell cell-feature">Preliminary Classes</div>
   <div class="table-cell">
     <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
@@ -115,37 +123,37 @@
                         <br />
                     <h2 style="color:darkblue;text-align:center;">No Premium Membership!</h2>
                     <br />
-                    <div class="detail_payment">
+                    <div class="detail_payment container-md" >
                         
-                        <table class="tableback">
+                        <table class="tableback" style="width:100%;left:0px;">
                             <tr>
-                                <td style="border-bottom:none;"> <asp:Image ID="companylogo" CssClass="logo" ImageUrl="~/images/adda1by0.png" runat="server" /> </td>
+                                <td style="border-bottom:none;    padding: 11px;    text-align: center;"> <asp:Image ID="companylogo" CssClass="logo" ImageUrl="~/images/adda1by0.png" runat="server" /> </td>
                                
                             </tr>
                             
                             <tr>
-                                <td style="padding-left:38px;"> <h3>Tuition Fees </h3> </td>
-                                <td> <h3>250</h3> </td>
+                                <td style="padding-left:38px;"> <h3 style="font-size: 1.2rem;">Tuition Fees </h3> </td>
+                                <td> <h3 style="font-size: 1.2rem;">250</h3> </td>
                             </tr>
                             
                             <tr>
-                                <td style="padding-left:38px;"> <h3>Tax (All)</h3> </td>
-                                <td> <h3>75</h3> </td>
+                                <td style="padding-left:38px;"> <h3 style="font-size: 1.2rem;">Tax (All)</h3> </td>
+                                <td> <h3 style="font-size: 1.2rem;">75</h3> </td>
                             </tr>
                             
                             <tr>
-                                <td style="padding-left:38px;"> <h3>Total Ammount </h3> </td>
-                                <td> <h3>325</h3> </td>
+                                <td style="padding-left:38px;"> <h3 style="font-size: 1.2rem;">Total Ammount </h3> </td>
+                                <td> <h3 style="font-size: 1.2rem;">325</h3> </td>
                             </tr>
                             
                             <tr>
-                                <td style="padding-left:38px;"> <h3>Discount (Launch)</h3></td>
-                                <td> <h3>-214</h3> </td>
+                                <td style="padding-left:38px;"> <h3 style="font-size: 1.2rem;">Discount (Launch)</h3></td>
+                                <td> <h3 style="font-size: 1.2rem;">-214</h3> </td>
                             </tr>
                             
                             <tr style="background-color:#039ee3; color:darkblue;">
-                                <td style="padding-left:38px;"> <h3>Total Ammount to pay</h3> </td>
-                                <td> <h3>111</h3> </td>
+                                <td style="padding-left:38px;"> <h3 style="font-size: 1.2rem;">Total Ammount to pay</h3> </td>
+                                <td> <h3 style="font-size: 1.2rem;">111</h3> </td>
                             </tr>
                         </table>
                        

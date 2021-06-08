@@ -16,6 +16,7 @@ namespace add1By0.web_pages
 {
     public partial class Redirecting : System.Web.UI.Page
     {
+        string adda1by0_databasename = "adda1by0";
         public string namee = "";
         public string redirectingLinkSTR = "";
         public string redirectingmsg = "";
@@ -42,7 +43,7 @@ namespace add1By0.web_pages
             {
 
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from adda1by0.registration where email='" + useremail + "';", conn);
+                MySqlCommand cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".registration where email='" + useremail + "';", conn);
                 var rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
@@ -60,7 +61,7 @@ namespace add1By0.web_pages
             // admin here
                 else
                 {
-                    MySqlCommand cmd1 = new MySqlCommand("select * from adda1by0.login_admins where email='" + useremail + "';", conn);
+                    MySqlCommand cmd1 = new MySqlCommand("select * from "+ adda1by0_databasename + ".login_admins where email='" + useremail + "';", conn);
                     rdr = cmd1.ExecuteReader();
                     while (rdr.Read())
                     {
@@ -88,7 +89,7 @@ namespace add1By0.web_pages
             {
                
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("delete from adda1by0.currentusers where email='" + useremail + "';", conn);
+                MySqlCommand cmd = new MySqlCommand("delete from "+ adda1by0_databasename + ".currentusers where email='" + useremail + "';", conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 redirectingLinkSTR = "homePage.aspx";
@@ -101,7 +102,7 @@ namespace add1By0.web_pages
                 {
                     bool signin = true;
                     conn.Open();
-                    MySqlCommand cmd = new MySqlCommand("select * from adda1by0.registration where email='" + useremail+"';", conn);
+                    MySqlCommand cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".registration where email='" + useremail+"';", conn);
                     var rdr = cmd.ExecuteReader();
                     while (rdr.Read())
                     {
@@ -135,7 +136,7 @@ namespace add1By0.web_pages
 
 
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from adda1by0.registration where email='" + useremail + "';", conn);
+                MySqlCommand cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".registration where email='" + useremail + "';", conn);
                 var rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
@@ -166,7 +167,7 @@ namespace add1By0.web_pages
                 }
                 else
                 {
-                    MySqlCommand cmd1 = new MySqlCommand("select * from adda1by0.login_admins where email='" + useremail + "';", conn);
+                    MySqlCommand cmd1 = new MySqlCommand("select * from "+ adda1by0_databasename + ".login_admins where email='" + useremail + "';", conn);
                     rdr = cmd1.ExecuteReader();
                     while (rdr.Read())
                     {
@@ -196,7 +197,7 @@ namespace add1By0.web_pages
             {
                 String topicname = Request.QueryString["topicName"];
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from adda1by0.registration where email='" + useremail + "';", conn);
+                MySqlCommand cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".registration where email='" + useremail + "';", conn);
                 var rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
@@ -221,7 +222,7 @@ namespace add1By0.web_pages
                 }
                 else
                 {
-                    MySqlCommand cmd1 = new MySqlCommand("select * from adda1by0.login_admins where email='" + useremail + "';", conn);
+                    MySqlCommand cmd1 = new MySqlCommand("select * from "+ adda1by0_databasename + ".login_admins where email='" + useremail + "';", conn);
                     rdr = cmd1.ExecuteReader();
                     while (rdr.Read())
                     {

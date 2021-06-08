@@ -12,6 +12,7 @@ namespace add1By0.web_pages
 {
     public partial class premiumMembership : System.Web.UI.Page
     {
+        string adda1by0_databasename = "adda1by0";
         MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         public string nameOfUser = "";
         public string phoneNo = "";
@@ -39,7 +40,7 @@ namespace add1By0.web_pages
             string user = Request.QueryString["Name"].ToString();
             
             email = user;
-            MySqlCommand cmd = new MySqlCommand("select * from adda1by0.registration where email='" + user + "';", conn);
+            MySqlCommand cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".registration where email='" + user + "';", conn);
             var rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
@@ -58,7 +59,7 @@ namespace add1By0.web_pages
                     success.Visible = true;
 
                     conn.Open();
-                    cmd = new MySqlCommand("select * from adda1by0.payments where email='" + email+"';", conn);
+                    cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".payments where email='" + email+"';", conn);
                     rdr = cmd.ExecuteReader();
                     while (rdr.Read())
                     {

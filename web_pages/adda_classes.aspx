@@ -144,7 +144,7 @@
                                            <% int NumberOfVediosContentInOneTopic = Convert.ToInt32(VedioLectures_NumberOf_topic[current_Topic]); %>
                                            <% for (int p = 0; p < NumberOfVediosContentInOneTopic; p++,current_vedioContent++)
                                         { %>
-                                           <div style="height:35px" onclick="playTheVedio('<%= vedioLinksOf_Subject[current_vedioContent] %>','<%= backView %>','<%=classNo %>','<%=userEmail %>','<%=status %>'),'<%=i %>','<%=o %>'">
+                                           <div style="height:35px"  onclick="playTheVedio('<%= vedioLinksOf_Subject[current_vedioContent] %>','<%= backView %>','<%=classNo %>','<%=userEmail %>','<%=status %>','<%=i %>','<%=o %>')">
                                         <h3 style="text-align:right;cursor:pointer; font-size:1rem;" >Vedio Part <%=p %></h3>
                                         </div>
                                            <%} %>

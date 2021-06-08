@@ -36,7 +36,7 @@ userpane.addEventListener("click", function () {
 function changepasswordPane() {
     
     console.log("changepassword pane called");
-    console.log("change password pane display is ", document.getElementById("changepassword").style.height.toString());
+    console.log("change password pane display is ", document.getElementById("changepassword").style.display);
     if (document.getElementById("changepassword").style.height == "0vh") {
         
         document.getElementById("changepassword").style.height = "100vh";

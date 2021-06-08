@@ -32,13 +32,37 @@
     text-transform: capitalize;
     font-weight: bold;
     cursor:pointer;
+   
         }
     </style>
+   
+
     <script runat="server">
         public string emailpresent = "";
         public string cookiepresent = "";
+        public bool IsMobileBrowser()
+        {
+            String labelText = "";
+            System.Web.HttpBrowserCapabilities myBrowserCaps = Request.Browser;
+            if (((System.Web.Configuration.HttpCapabilitiesBase)myBrowserCaps).IsMobileDevice)
+            {
+                labelText = "Browser is a mobile device.";
+
+                return true;
+            }
+            else
+            {
+                labelText = "Browser is not a mobile device.";
+
+                return false;
+            }
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "", "alert('"+ labelText + "');", true);
+
+        }
+
         void Page_Load(object sender, EventArgs e)
         {
+
 
 
             if (ifcookiePresent())
@@ -77,6 +101,7 @@
         })()
     </script>
     <title></title>
+
 </head>
 <body  style="background:none;">
     
@@ -91,9 +116,9 @@
            
          <div class="container-sm" style="margin-top:40vh;padding:20px; max-width:375px;   background: darkblue;border-radius: 10px;">
             <h2 style="color:white;">Adda1By0</h2>
-             <a style="background: white;border-radius: 10PX;color: darkblue;font-family: cursive;" href="homepage.aspx">
+             <a style="background: white;border-radius: 10PX;color: darkblue;font-family: cursive;font-size:1.1rem!important;" href="homepage.aspx">
     <div class="container-sm">
-      <h3>Continue as <%=emailpresent %>  </h3>
+      <h3 style="font-size:1.1rem!important">Continue as <%=emailpresent %>  </h3>
   </div>
       </a>
     <hr style=" margin-top: 83px;color: white;height: 3px;" />
@@ -109,7 +134,7 @@
 
             <div class="container-md" style="margin-top:14%;color:darkblue">
               <h2>Adda1By0</h2>
-              <div class="display-2 text-center fw-bolder"> Login Portal</div>
+              <div class="display-2 text-center fw-bolder headind-login"> Login Portal</div>
                 <div class="form-group">
                   <label for="uname">Username:</label>
                    <asp:TextBox ID="name_signin_box" CssClass="form-control" placeholder="Enter username" runat="server" required></asp:TextBox>
@@ -165,11 +190,14 @@
 
 </div>
 </div>
+                <% if (IsMobileBrowser() == false)
+                    { %>
                 <div class="col-sm ">
                     <div class="row">
                         <div class="display-2" style="text-align: center;    font-weight: bold;    font-family: cursive;">Where Journey Begins.</div>
                     </div>
                 </div>
+                <%} %>
                 </div>
 
 

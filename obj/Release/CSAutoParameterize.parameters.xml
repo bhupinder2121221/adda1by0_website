@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ConnectionString-Web.config Connection String" description="ConnectionString Connection String used in web.config by the application to access the database." defaultValue="Server=MYSQL5044.site4now.net;Database=db_a6f987_bhupind;Uid=a6f987_bhupind;Pwd=B@blu@2121221_" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\adda1by0_for\ hosting\\add1By0\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

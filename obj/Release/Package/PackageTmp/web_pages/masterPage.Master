@@ -4,6 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+   <link rel="stylesheet" href="../App_Themes/css/changepassword.css" />
+
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../App_Themes/css/homePage.css" />
     <link rel="stylesheet" href="../App_Themes/css/masterpage.css" />
@@ -17,11 +19,27 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    
     
     <style>
         .down {
             font-weight: bolder;background: blue;color: wheat;width: 30px;text-align: center; border-radius: 25px;
+        }
+        .flickity-viewport{
+            height:auto;
+        }
+        .usernamehide {
+            height:0px;
+            overflow:hidden;
+            position:fixed;
+        }
+        .subject-slides {
+            background: orange;  
+            padding: 6px;   
+            border-radius: 14px;
+        }
+        .carousel {
+            background:none;
         }
     </style>
     <% if (IsMobileBrowser()==true)
@@ -314,11 +332,93 @@
   .fottertext {
       font-size:1rem;
   }
+
+
+  h1{
+      font-size:1.5rem;
+  }
+  h4{
+      font-size:1.2rem;
+  }
+        .intro {
+            margin-top: 13px;
+        }
+        .quesImg {
+    transition: all linear 1s;
+    display: inline-block;
+    float: left;
+    height: 24px;
+    width: 21px;
+    margin-right: 7px;
+}
+        .service-text {
+    font-size: 2rem;
+    font-family: 'Inconsolata', monospace;
+}
+        .servives-tabs-img {
+    margin: auto;
+    height: 102px;
+    width: 102px;
+    border: 2px #17a5e9 solid;
+    border-radius: 101px;
+    transition: all linear 1s;
+}
+        .servicestext {
+    font-size: 2rem;
+    color: darkblue;
+    text-align: center;
+}
+        .servicesinfo {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+        .img-services {
+    float: right;
+    display: inline-block;
+    height: 500px;
+    overflow: hidden;
+}
+        .service-text-contact {
+    display: none;
+}
+        .contact {
+    width: 100%;
+    height: auto;
+    background-color: #17a5e9;
+    color: white;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 52px;
+}
+        .contact-btn {
+    width: 100%;
+    height: 91px;
+    padding: 7px;
+    display: inline-block;
+    float: right;
+    background-color: black;
+    color: white;
+    border-radius: 41px;
+    text-align: center;
+    font-size: 3.2rem;
+    box-shadow: 3px 4px 6px rgb(0 0 0);
+}
+        .frontheader {
+    transform: translateY(-56px);
+}
+        .carousel-cell:before{
+            display:none;
+        }
     </style>
 
     <%} %>
 
    <style>
+       .flickity-page-dots {
+    margin-left: 40%;
+}
+       .flickity-slider
+       {    transform: translateX(14.53%);}
   /* Make the image fully responsive */
   .carousel-inner img {
     width: 100%;
@@ -352,6 +452,55 @@
     color: white;
     height:100%;
 }
+  .loginimage{
+    height: 51px;
+    width: 82px;
+    
+    border-radius: 50%;
+  }
+  .white {
+      background:white;
+      width:51px;
+  }
+  .carousel-cell:before {
+        display:none;
+    }
+    .flickity-viewport{
+        height:55px;
+    }
+    .carousell {
+            height: 55px;
+    overflow: hidden;
+    }
+    .carousel-cell {
+        background:none;
+    }
+    .subject-slides {
+            background: orange;
+    padding: 6px;
+    border-radius: 14px;
+    height: 53px;
+    padding: 13px;
+    text-align: center;
+    }
+    .heading_sponsership {
+    font-family: 'Nerko One', cursive;
+    font-size: 3.9rem;
+    color: black;
+    opacity: 5;
+    text-align: center;
+}
+    .sponsers {
+        width:100%;
+    }
+    .name {
+    text-align: center;
+    color: darkblue;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    font-weight: revert;
+}
+  
   </style>
     
     
@@ -359,6 +508,7 @@
     <script runat="server">
         public string global_username = "username";
         string postbacking = "";
+        public string username_from_session ="";
 
         public string get_global_username { get { return global_username; } set { global_username = value; } }
         public string get_global_name { get { return userName.Text; } }
@@ -389,21 +539,27 @@
             {
 
                 var username = Session["adda_user_email"].ToString();
+                username_from_session = Session["adda_user_name"].ToString();
                 userName.Text = username;
                 get_global_username  = username;
                 visitorEntered.Visible = false;
                 userEntered.Visible = true;
+                visitorEntered1.Visible = false;
+                userEntered1.Visible = true;
+                picpathfinder();
                 postbacking = "homepage.aspx";
 
-                
+
             }
             else
             {
                 userName.Text = "Visitor";
                 postbacking = "homepage.aspx";
+                username_from_session = "Visitor";
                 visitorEntered.Visible = true;
                 userEntered.Visible = false;
-                
+                visitorEntered1.Visible = true;
+                userEntered1.Visible = false;
             }
 
 
@@ -433,11 +589,11 @@
     </head>
     <%if (IsMobileBrowser()==true)
         { %>
-    <body onunload="widow_closed" style="width:100%" >
+    <body class="back" onunload="widow_closed" style="width:100%" >
     <%} %>
     <%if (IsMobileBrowser() == false)
         { %>
-        <body onunload="widow_closed" style="width:100%">
+        <body class="back" onunload="widow_closed" style="width:100%">
     <%} %>
             <div id="load" class="container-fluid" style="text-align:center;z-index:45; width: 100%;
     position: absolute;
@@ -445,6 +601,7 @@
              <div class="spinner-border text-primary" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
+               
 
                 </div>
             <div class="container-fluid" style="opacity:0.1;padding:0px;" id="backload">
@@ -453,59 +610,147 @@
 
 
             <div class="container-fluid" style="padding-right:0; padding-left:0; margin-right:auto;margin-left:auto">
-    <nav class="navbar navbar-expand-sm bg-secondary navbar-light" style="display:contents;background-color:#039ee3">
-    <div class="container-fluid" style="background:#039ee3">
+    
+
+                 <%if (IsMobileBrowser() == true)
+                     { %>
+                <div class="container-fluid" style="padding:0px;margin:0px;">
+                <nav class="navbar navbar-expand-lg navbar-mainbg" style="display:inline-table;padding-right:0px;">
+        <a class="navbar-brand navbar-logo" style="width:25%" href="homepage.aspx">Adda1By0</a>
+
+
+        <button class="navbar-toggler" style="background: white;height: 44px;width: 54px;    position: relative;left: 48%;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img style="height:37px;" src="https://img.icons8.com/ios-filled/50/000000/horizontal-settings-mixer--v2.png"/>
+        </button>
+         
+        <div class="collapse navbar-collapse" style="width:auto;padding-bottom:100%;" id="navbarSupportedContent">
+
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector" style="width:100%;"><div class="left"></div><div class="right"></div></div>
+               <li class="nav-item" id="loginnavbar" style="margin-right:0px;height: 87px;overflow: hidden;">
+                    <a class="nav-link" style="width:100%;" href="javascript:void(0);" onclick="expandnavbar()">
+                       <div class="row">
+                           <%if (get_global_name.Length <= 7)
+                               { %>
+                           <asp:Image ID="Image1" CssClass="loginimage white" ImageUrl="~/images/user.svg" runat="server" />
+                       
+                           <%} %>
+                           <%if (get_global_name.Length>7) { %>
+                           <asp:Image ID="loginimg" CssClass="loginimage" ImageUrl="" runat="server" />
+                       
+                           <%} %>
+                         <h3 style="font-size:1rem;"><%=username_from_session %></h3>
+                           </div>
+                    </a>
+                   <ul>
+                     <asp:Panel ID="visitorEntered1" runat="server">
+                      <li style="width:100%"><a class="dropdown-item" style="color: black;font-size: 1.3rem; margin-left:22px;" href="signInPage.aspx">Sign In</a></li>
+                      <li style="width:100%"><a class="dropdown-item" style="color: black;font-size: 1.3rem;margin-left:22px;" href="loginPage.aspx">Sign Up</a></li>
+                </asp:Panel>
+               <asp:Panel ID="userEntered1" runat="server">
+                    <li><a class="dropdown-item" style="color: black;    font-size: 1.3rem;" href="Redirecting.aspx?Name=<%=userName.Text.ToString() %>&profile=going">Profile</a></li>
+                    <li><a class="dropdown-item" style="color: black;    font-size: 1.3rem;" href="premiumMembership.aspx?Name=<%=userName.Text.ToString() %>">Premium Membership</a></li>
+                    <li><a class="dropdown-item" style=" color: black;    font-size: 1.3rem;padding-left:6px;" href="changepassword.aspx"><h2  id="demoo" class="dropdown-item" style="width:250px;height:50px; font-weight:bolder; font-size:1.3rem;">Change Password</h2></a></li>
+
+                      <li><a class="dropdown-item" style="color: black;    font-size: 1.3rem;" href="../logout.aspx">Logout</a></li>
+                </asp:Panel>
+                       </ul>
+                </li>
+                <li id="dashboard" class="nav-item active" style="margin-right:0px">
+                    <a class="nav-link" href="<%= postbacking %>" onclick="loadingLogo()"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                </li>
+                <li id="course" class="nav-item " style="margin-right:0px">
+                    <a class="nav-link" href="courses.aspx?Name=<%=userName.Text.ToUpper() %>" onclick="loadingLogo()"><i class="far fa-address-book"></i>Courses</a>
+                </li>
+                <li id="discussion" class="nav-item" style="margin-right:0px">
+                    <a class="nav-link " href="../discussion.aspx?uid=<%=global_username %>" onclick="loadingLogo()"><i class="far fa-clone"></i>Discussion Portal</a>
+                </li>
+                <li id="about" class="nav-item" style="margin-right:0px">
+                    <a class="nav-link" href="aboutPage.aspx?uid=<%=global_username %>" onclick="loadingLogo()"><i class="far fa-calendar-alt"></i>About Us</a>
+                </li>
+                <li id="sponsership" class="nav-item">
+                    <a class="nav-link" href="sponsership.aspx?Name=<%=global_username %>" onclick="loadingLogo()"><i class="far fa-chart-bar"></i>Sponserships</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+                    </div>
+
+                <%} %>
+
+
+
+
+                
+                 <%if (IsMobileBrowser() == false)
+                     { %>
+                <nav class="navbar navbar-expand-sm bg-secondary navbar-light" style="display:contents;background-color:#039ee3">
+    <div class="container-fluid" style="background:#039ee3;        z-index: 4555;">
         
-    <a class="navbar-brand fs-1" style="color:aliceblue;font-weight:bolder;">Adda1By0</a>
+    <a class="navbar-brand fs-1" style="color:aliceblue;width:25%;font-weight:bolder;">Adda1By0</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#hfjsdhf" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
         <div class="container-fluid">
-    <div class="collapse navbar-collapse bg-light" style="z-index: 0;" id="hfjsdhf">
+    <div class="collapse navbar-collapse bg-light" style="z-index: 0;    border-radius: 41px 0px 0px 41px;" id="hfjsdhf">
     <ul class="navbar-nav navmobile">
           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <asp:Label ID="userName" CssClass="username fs-2 visitor" style="margin-left:22px;" Text="Visitor" ForeColor="Wheat"  Height="50px" runat="server"></asp:Label>
-               
 
-
-
-          </a>
+          <a class="nav-link dropdown-toggle" style="height:66px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           <div class="row" style="width:197px">
+               <div class="col-sm" style="max-width:57px;padding:0px;margin-0px;">
+              <%if (get_global_name.Length <= 7)
+                               { %>
+                           <asp:Image ID="Image2" CssClass="loginimage white" ImageUrl="~/images/user.svg" runat="server" />
+                       
+                           <%} %>
+                           <%if (get_global_name.Length>7) { %>
+                           <asp:Image ID="logininamge2" CssClass="loginimage" Width="52px" ImageUrl="" runat="server" />
+                       
+                           <%} %>
+                   </div>
+               <div class="col-sm" style="padding:0px;margin:0px;">
+                   <h1 class="username fs-2 visitor"><%=username_from_session %></h1>
+              <asp:Label ID="userName"  CssClass="usernamehide"  Text="Visitor" ForeColor="Wheat"   runat="server"></asp:Label>
+          </div>
+               </div>
+                   </a>
 
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="transition-property:all;transition-duration:2s;transition-timing-function:ease-in; float:left;">
-               <asp:Panel ID="visitorEntered" runat="server">
-                      <li style="width:100%"><a class="dropdown-item" style="margin-left:22px;" href="signInPage.aspx">Sign In</a></li>
+              
+              <asp:Panel ID="visitorEntered" runat="server">
+                      <li style="width:100%"><a class="dropdown-item" style=" margin-left:22px;" href="signInPage.aspx">Sign In</a></li>
                       <li style="width:100%"><a class="dropdown-item" style="margin-left:22px;" href="loginPage.aspx">Sign Up</a></li>
                 </asp:Panel>
-           <asp:Panel ID="userEntered" runat="server">
-                <li><a class="dropdown-item" href="Redirecting.aspx?Name=<%=userName.Text.ToString() %>&profile=going">Premium Membership</a></li>
-                <li><a class="dropdown-item" href="premiumMembership.aspx?Name=<%=userName.Text.ToString() %>">Profile</a></li>
-                <li><h2  id="demoo" class="dropdown-item" style="width:250px;height:50px; font-weight:bolder; font-size:x-large;" onclick="changepasswordPane()">Change Password</h2></li>
-
-                  <li><a class="dropdown-item" href="Redirecting.aspx?Name=<%=userName.Text.ToString() %>&logout=logging">Logout</a></li>
-            </asp:Panel>
-              
+               <asp:Panel ID="userEntered" runat="server">
+                    <li><a class="dropdown-item" style="" href="Redirecting.aspx?Name=<%=userName.Text.ToString() %>&profile=going">Premium Membership</a></li>
+                    <li><a class="dropdown-item" style="" href="premiumMembership.aspx?Name=<%=userName.Text.ToString() %>">Profile</a></li>
+                    <li><a class="dropdown-item" style="padding:0px;" href="changepassword.aspx"><h2  id="demoo" class="dropdown-item" style="width:250px;height:50px; font-weight:bolder; font-size:1.3rem;margin-bottom:0px;">Change Password</h2></a></li>
+                   
+                      <li><a class="dropdown-item" style="" href="../logout.aspx">Logout</a></li>
+                </asp:Panel>
              
               
           </ul>
 
         </li>
-        <li class="nav-item active">
+        <li class="nav-item active ">
             <a class="nav-link fs-3" style="margin-left:22px;" href="<%= postbacking %>" onclick="loadingLogo()">Home</a>
         </li>
         
-        <li class="nav-item active">
+        <li class="nav-item active ">
             <a class="nav-link fs-3" style="margin-left:22px;" href="courses.aspx?Name=<%=userName.Text.ToUpper() %>" onclick="loadingLogo()">Courses</a>
         </li>
         
-        <li class="nav-item active">
+        <li class="nav-item active ">
             <a class="nav-link fs-3" style="margin-left:22px;" href="../discussion.aspx?uid=<%=global_username %>" onclick="loadingLogo()">Discussions</a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item active ">
             <a class="nav-link fs-3" style="margin-left:22px;" href="aboutPage.aspx?uid=<%=global_username %>" onclick="loadingLogo()">About</a>
         </li>
         
-        <li class="nav-item active">
+        <li class="nav-item active ">
             <a class="nav-link fs-3" style="margin-left:22px;" href="sponsership.aspx?Name=<%=global_username %>" onclick="loadingLogo()">Sponsership</a>
         </li>
         
@@ -518,6 +763,10 @@
 
 
 </nav>
+                <%} %>
+
+
+
   <asp:Panel ID="flex_panel" runat="server">
         <div id="demo" class="carousel slide" data-ride="carousel" style="position:relative;z-index:-1">
   <ul class="carousel-indicators">
@@ -559,34 +808,11 @@
 
 
     <form id="form1" runat="server">
-    <div id="changepassword" class="changepassword">
-        <div id="changepassword-pane" class="changepassword-pane">
-            <div id="closeChangepassword-pane" onclick="changepasswordPane()"><asp:Image ID="closeImage" CssClass="closeimage" ImageUrl="~/images/1067_delete_Cancel_close_cross-512.png"  runat="server" /></div>
-                <div> 
-                    
-                        <asp:HiddenField ID="codSent" runat="server" />
-                    <h1 style="margin-left:65px; color:wheat; height:40px; " class="heading-home"> Change Password</h1>
-                    <h3 style="color:white; margin:10px; margin-top:20px;"> We have sent verification code to your Email address. 
-                        Please Type it below to change password
-                    </h3><asp:Button ID="sendCodebtn" CssClass="sendcodebtn" OnClick="sendCodebtn_Click"  Text="Send Button" runat="server" />
-                    
-                    <asp:Label ID="entercode" CssClass="entercode" runat="server" Text="Enter Code Sent To Mail"></asp:Label>
-                    
-                    <asp:TextBox ID="codeEbteredBox" CssClass="entercode" runat="server"></asp:TextBox>
-                        <asp:Label ID="password" CssClass="entercode" Text="New Password" runat="server"></asp:Label>
-                        <br />
-                        <asp:TextBox ID="passwordBox" CssClass="entercode" runat="server"></asp:TextBox>
-                        <asp:Label ID="confirmPassword" CssClass="entercode" Text="Confirm Password" runat="server"></asp:Label>
-                        <asp:TextBox ID="confirmPasswordBox" CssClass="entercode" runat="server"> </asp:TextBox>
-                        <asp:Button ID="changepasswordBtn" CssClass="change-passwordbtn" OnClick="changepasswordBtn_Click" Text="Change Password" runat="server" />
-                       
-                </div>
-            </div>
-    </div>
+    <asp:HiddenField ID="codSent" runat="server" />
   
       
     <!-- dynamic place to work-->
-    <div class="spaceToWork">
+    <div class="spaceToWork" style="height: fit-content;">
         <asp:contentplaceholder id="fullWorkSpace" runat="server">
             
         </asp:contentplaceholder>
@@ -594,11 +820,9 @@
    
 
     <asp:ContentPlaceHolder ID="scripts" runat="server"></asp:ContentPlaceHolder>
-    <script src="../flex.js" type="text/javascript"></script>
-       
-    <script type="text/javascript" src="../userpane.js"></script>
+    
          </form>
-
+                <div class="container-md">
      <div class="container-fluid" style="padding:0px">
             <div id="googlemap" class="googleMap-home"></div>    
             
@@ -659,6 +883,9 @@
                <div class="col">
                    <h3 class="fs-4"> Roll no. 17031874265</h3>
                 </div>
+               <div class="row">
+                   Resourses used from <a href="https://icons8.com/icon/M4SmNocbbb58/tune">Tune icon by Icons8</a>
+               </div>
                </div>
   </footer>
 
@@ -679,14 +906,56 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAzW9D2vqyjjdnBmHfyajdLEWwgQsAl2E&callback=initMap"></script>
  </div>
+                    </div>
                 </div>
+
                 </div>
+            <script src="../flex.js" type="text/javascript"></script>
+       
+    <script type="text/javascript" src="../userpane.js"></script>
             <script type="text/javascript" >
-                
+                function setnavigation() {
+                    var currentsite = window.location.href.toString();
+                    console.log("Here is current url", currentsite)
+                    document.getElementById("dashboard").classList.remove("active");
+                    document.getElementById("course").classList.remove("active");
+                    document.getElementById("discussion").classList.remove("active");
+                    document.getElementById("about").classList.remove("active");
+                    document.getElementById("sponsership").classList.remove("active");
+
+                    if (currentsite.match("homepage")) {
+                        console.log("homepage is opened");
+                        document.getElementById("dashboard").className = "nav-item active";  
+
+                    }
+                    if (currentsite.match("courses.aspx")) {
+                        console.log("courses.aspx is opened");
+                        document.getElementById("course").className = "nav-item active";  
+
+                    }
+
+                    if (currentsite.match("discussion.aspx")) {
+                        console.log("discussion.aspx is opened");
+                        document.getElementById("discussion").className = "nav-item active";  
+
+                    }
+                    if (currentsite.match("aboutPage.aspx")) {
+                        console.log("aboutPage.aspx is opened");
+                        document.getElementById("about").className = "nav-item active";  
+
+                    }
+                    if (currentsite.match("sponsership.aspx")) {
+                        console.log("sponsership.aspx is opened");
+                        document.getElementById("sponsership").className = "nav-item active";  
+                    }
+                }
                 document.onreadystatechange = function () {
                     var state = document.readyState
                     if (state == 'complete') {
                         setTimeout(function () {
+                           <% if(IsMobileBrowser()==true){%>
+                            setnavigation();
+                            <%}%>
                             document.getElementById('interactive');
                             document.getElementById('load').style.visibility = "hidden";
                             document.getElementById('load').style.display = "none";
@@ -696,6 +965,58 @@
 
                   
                 }
+
+                function expandnavbar() {
+                    console.log("login clicked");
+                    var height = document.getElementById('loginnavbar').style.height;
+                    console.log("height of navbar login is ", height);
+                    if (height == "87px") {
+                        console.log("navbar collapsed");
+                        document.getElementById('loginnavbar').style.height = "auto";
+                    }
+                    else {
+
+                        document.getElementById('loginnavbar').style.height = "87px";
+                    }
+                }
+                function test() {
+                    var tabsNewAnim = $('#navbarSupportedContent');
+                    var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
+                    var activeItemNewAnim = tabsNewAnim.find('.active');
+                    var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+                    var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+                    var itemPosNewAnimTop = activeItemNewAnim.position();
+                    var itemPosNewAnimLeft = activeItemNewAnim.position();
+                    $(".hori-selector").css({
+                        "top": itemPosNewAnimTop.top + "px",
+                        "left": itemPosNewAnimLeft.left + "px",
+                        "height": activeWidthNewAnimHeight + "px",
+                        "width": activeWidthNewAnimWidth + "px"
+                    });
+                    $("#navbarSupportedContent").on("click", "li", function (e) {
+                        $('#navbarSupportedContent ul li').removeClass("active");
+                        $(this).addClass('active');
+                        var activeWidthNewAnimHeight = $(this).innerHeight();
+                        var activeWidthNewAnimWidth = $(this).innerWidth();
+                        var itemPosNewAnimTop = $(this).position();
+                        var itemPosNewAnimLeft = $(this).position();
+                        $(".hori-selector").css({
+                            "top": itemPosNewAnimTop.top + "px",
+                            "left": itemPosNewAnimLeft.left + "px",
+                            "height": activeWidthNewAnimHeight + "px",
+                            "width": activeWidthNewAnimWidth + "px"
+                        });
+                    });
+                }
+                $(document).ready(function () {
+                    setTimeout(function () { test(); });
+                });
+                $(window).on('resize', function () {
+                    setTimeout(function () { test(); }, 500);
+                });
+                $(".navbar-toggler").click(function () {
+                    setTimeout(function () { test(); });
+                });
             </script>
 </body>
 </html>

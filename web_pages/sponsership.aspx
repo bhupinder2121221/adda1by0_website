@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
 </asp:Content>
 <asp:Content ID="work" ContentPlaceHolderID="fullWorkSpace" runat="server">
-    <h1 class="heading_sponsership">Our Sponsership</h1>
+    <h1 class="heading_sponsership" style="font-size:2.9rem;">Our Sponsership</h1>
     <div class="container-md" style="    max-width: 566px;">
     <asp:Image ID="mine" ImageUrl="~/images/1542594957.svg" runat="server" /> 
     </div>

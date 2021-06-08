@@ -227,7 +227,7 @@
             <h1 class="contact-heading" >REQUEST FREE QUOTA.</h1>
             <br />
             <p class="service-text-contact">Get answers and advice from people you want it from.</p>
-            <div class="contact-btn">Contact Us</div>
+          <a class="contact-btn" href="tel:7901926491">  <div class="">Contact Us</div></a>
         </div>
     
 </asp:Content>

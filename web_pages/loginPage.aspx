@@ -19,8 +19,7 @@
        
    </style>
    
-   
-    
+      
     <script runat="server">
         public bool IsMobileBrowser()
         {

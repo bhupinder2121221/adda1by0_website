@@ -10,7 +10,7 @@
     <div>
        
         <div class="backcover" style="height: fit-content;">
-             <h1 class="heading_premium" style="font-size:3.9rem"> Get Your Premium Membership</h1>
+             <h1 class="heading_premium" style="font-size:3rem"> Get Your Premium Membership</h1>
             <div class="portal" style="padding:0px;" >
                 <asp:Panel ID="NotSuccess" Width="100%" runat="server">
                     <h1 class="name">Hi! <%=nameOfUser.ToUpper() %></h1>
@@ -164,9 +164,11 @@
                 
                 <asp:Panel ID="success" CssClass="success" runat="server">
                     <asp:Image ID="paid_pic" CssClass="paid_pic" ImageUrl="~/images/paid.png" runat="server" />
-                    <h1 class="cool">Cool! </h1>
+                    <h1 class="cool" style="position:inherit">Cool! </h1>
                     <h3 class="heading2">You are our Premium Member.</h3>
                     <h3 class="thanks">Thanks for being our member.</h3>
+                    <div style="width:100%;height:auto;overflow-x:scroll;">
+                       
                     <table class="tableback" style="padding:14px;font-size:1.4rem;font-weight:bold;">
                         <tr>
                             <td>Name</td>
@@ -193,6 +195,7 @@
                             <td>Rs <%=amountPaid %></td>
                         </tr>
                     </table>
+                        </div>
                 </asp:Panel>
 
             </div>

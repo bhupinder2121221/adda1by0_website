@@ -13,6 +13,7 @@ namespace add1By0
 {
     public partial class discussion : System.Web.UI.Page
     {
+        string adda1by0_databasename = "adda1by0";
         ArrayList discussionsNames = new ArrayList();
         ArrayList teacherName = new ArrayList();
         ArrayList createdTime = new ArrayList();
@@ -27,7 +28,7 @@ namespace add1By0
         {
             String useremail = Request.QueryString["uid"].ToString();
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand("select * from adda1by0.alldiscussions order by id DESC;", conn);
+            MySqlCommand cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".alldiscussions order by id DESC;", conn);
             var rdr = cmd.ExecuteReader();
             var i = 0;
             while (rdr.Read())
@@ -69,7 +70,7 @@ namespace add1By0
         bool adminIsHere()
         {
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand("select * from adda1by0.login_admins where email='"+userName.Text+"';",conn);
+            MySqlCommand cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".login_admins where email='"+userName.Text+"';",conn);
             var rdr = cmd.ExecuteReader();
             while(rdr.Read())
             {
@@ -92,7 +93,7 @@ namespace add1By0
             String topiName = topicNameBox.Text;
             String createdDateAndTime = System.DateTime.Now.ToString();
             String newTableName = "adda1by0.Chatbox" + (indexOdDiscussion+1).ToString();
-            MySqlCommand cmd = new MySqlCommand("insert into adda1by0.alldiscussions values(null,'"+teachername+"','"+topiName+"','"+createdDateAndTime+"');", conn);
+            MySqlCommand cmd = new MySqlCommand("insert into "+ adda1by0_databasename + ".alldiscussions values(null,'"+teachername+"','"+topiName+"','"+createdDateAndTime+"');", conn);
             cmd.ExecuteNonQuery();
             MySqlCommand cmd1 = new MySqlCommand("create table " + newTableName + " (chats varchar(250) not null, userName varchar(50) not null,creationTime varchar(30) not null) ;", conn);
             cmd1.ExecuteNonQuery();

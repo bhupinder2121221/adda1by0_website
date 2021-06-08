@@ -31,12 +31,12 @@
 .welcome-text {
     text-align: center;
     color: purple;
-    font-size: 9rem;
-    letter-spacing: 2.5rem;
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
 }
 .select-text {
     letter-spacing: 0.5rem;
-    font-size: 5rem;
+    font-size: 4rem;
     color: darkcyan;
     text-align: center;
 }
@@ -192,4 +192,42 @@
     display:block;
     margin:auto;
     float:none;
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.carousel {
+    background: #EEE;
+}
+
+.carousel-cell {
+    width: 50%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: gallery-cell;
+}
+
+    /* cell number */
+    .carousel-cell:before {
+        display: block;
+        text-align: center;
+        content: counter(gallery-cell);
+        line-height: 200px;
+        font-size: 80px;
+        color: white;
+    }
+
+.flickity-page-dots {
+    margin-left: 40%;
 }

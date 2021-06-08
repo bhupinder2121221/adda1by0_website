@@ -15,6 +15,7 @@ namespace add1By0.web_pages
 {
     public partial class checkoutPage : System.Web.UI.Page
     {
+		string adda1by0_databasename = "adda1by0";
 		private string CreateToken(string message, string secret)
 		{
 			secret = secret ?? "";

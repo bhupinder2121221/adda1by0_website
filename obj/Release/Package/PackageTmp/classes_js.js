@@ -91,9 +91,11 @@ function expandContractVediosLink(vedioPartId) {
   
 }
 
-function playTheVedio(vediourl,subjectId,classNo,name,status) {
+function playTheVedio(vediourl,subjectId,classNo,name,status,lesson,topicno) {
     console.log("Playing vedio url = ", vediourl);
-
-    window.location = "adda_classes.aspx?Name="+name+"&status=" + status + "&class=" + classNo + "&subject=" + subjectId + "&v_url=" + vediourl;
+    document.console.log("lesson", lesson);
+    document.getElementById("lesson").value = lesson;
+    document.getElementById("topicnumber").value = topicno;
+    window.location = "adda_classes.aspx?Name=" + name + "&status=" + status + "&class=" + classNo + "&subject=" + subjectId + "&v_url=" + vediourl;
     console.log("post back success");
 }

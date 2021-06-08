@@ -5,19 +5,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
 </asp:Content>
 <asp:Content ID="work" ContentPlaceHolderID="fullWorkSpace" runat="server">
-    <div class="backpage" style="height:90vh;">
-        <div class="letter" >
+    <h1 class="heading_sponsership">Our Sponsership</h1>
+    <div class="container-md" style="    max-width: 566px;">
+    <asp:Image ID="mine" ImageUrl="~/images/1542594957.svg" runat="server" /> 
+    </div>
+        <div class="container-sm " style="height:42vh;">
+        <div class="container-sm" >
             
-            <h1 class="heading_sponsership">Our Sposership</h1>
-            <div class="namesspace">
+            
+            <div class="container-sm text-center">
+                <marquee class="sponsers" width="60%" direction="up" style="height:39vh">
             <%int i; %>
             <%for(i = 0; i < namesOfSponsers.Count; i++){ %>
             
             <h1 class="name"><%=namesOfSponsers[i].ToString().ToUpper() %></h1>
 
             <%} %>
+                    </marquee>
                 </div>
         </div>
 
     </div>
+    <div class="container-md" style="    max-width: 566px;">
+    <asp:Image ID="Image1" ImageUrl="~/images/1542594957.svg" runat="server" /> 
+        </div>
 </asp:Content>

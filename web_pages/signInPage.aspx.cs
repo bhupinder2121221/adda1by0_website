@@ -17,7 +17,7 @@ namespace add1By0.web_pages
 {
     public partial class signInPage : System.Web.UI.Page
     {
-        
+        string adda1by0_databasename = "adda1by0";
         MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
 
         protected void Page_Load(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace add1By0.web_pages
         bool check_student_user_exist_by_password()
         {
             conn.Open();
-           MySqlCommand cmd = new MySqlCommand("select * from adda1by0.registration where firstname=\"" + name_signin_box.Text + "\" and email=\"" + emailbox.Text + "\" and password =\"" + passwordBox.Text.ToString() + "\";", conn);
+           MySqlCommand cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".registration where firstname=\"" + name_signin_box.Text + "\" and email=\"" + emailbox.Text + "\" and password =\"" + passwordBox.Text.ToString() + "\";", conn);
             try
             {
                 var rdr = cmd.ExecuteReader();
@@ -85,7 +85,7 @@ namespace add1By0.web_pages
         bool check_admin_user_exist()
         {
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand("select * from adda1by0.login_admins where name = \"" + name_signin_box.Text + "\" and email=\"" + emailbox.Text + "\" and password = \"" + passwordBox.Text + "\";", conn);
+            MySqlCommand cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".login_admins where name = \"" + name_signin_box.Text + "\" and email=\"" + emailbox.Text + "\" and password = \"" + passwordBox.Text + "\";", conn);
 
             try
             {

@@ -19,8 +19,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-    
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <style>
         .down {
             font-weight: bolder;background: blue;color: wheat;width: 30px;text-align: center; border-radius: 25px;
@@ -46,7 +48,7 @@
         { %>
     <style>
        
-        
+      
         h4{
             font-size:1.8rem;
         }
@@ -409,6 +411,36 @@
         .carousel-cell:before{
             display:none;
         }
+          .bottomtext {
+            font-size:0.9rem;
+        }
+          .contact-btn {
+    width: 102%;
+    height: 54px;
+    padding: 7px;
+    display: inline-block;
+    float: right;
+    background-color: black;
+    color: white;
+    border-radius: 41px;
+    text-align: center;
+    font-size: 1.8rem;
+    box-shadow: 3px 4px 6px rgb(0 0 0);
+}
+        .servicesinfo {
+            font-size: 1.6rem;
+        }
+        .heading.courses.classes {
+    margin-bottom: 228px;
+    font-size: 1.6rem;
+}
+        .heading_premium {
+    color: purple;
+    font-weight: bolder;
+    font-size: 3rem;
+    text-align: center;
+    font-family: cursive;
+}
     </style>
 
     <%} %>
@@ -589,7 +621,7 @@
     </head>
     <%if (IsMobileBrowser()==true)
         { %>
-    <body class="back" onunload="widow_closed" style="width:100%" >
+    <body class="back" onunload="widow_closed" style="width:100%;padding-bottom:0%;" >
     <%} %>
     <%if (IsMobileBrowser() == false)
         { %>
@@ -615,15 +647,15 @@
                  <%if (IsMobileBrowser() == true)
                      { %>
                 <div class="container-fluid" style="padding:0px;margin:0px;">
-                <nav class="navbar navbar-expand-lg navbar-mainbg" style="display:inline-table;padding-right:0px;">
-        <a class="navbar-brand navbar-logo" style="width:25%" href="homepage.aspx">Adda1By0</a>
+                <nav class="navbar navbar-expand-lg navbar-mainbg" style="display:inline-table;padding:0px;">
+        <a class="navbar-brand navbar-logo" style="width:25%;font-size:1.9rem !important;" href="homepage.aspx">Adda1By0</a>
 
 
         <button class="navbar-toggler" style="background: white;height: 44px;width: 54px;    position: relative;left: 48%;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <img style="height:37px;" src="https://img.icons8.com/ios-filled/50/000000/horizontal-settings-mixer--v2.png"/>
         </button>
          
-        <div class="collapse navbar-collapse" style="width:auto;padding-bottom:100%;" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" style="width:100%;padding-bottom:100%;" id="navbarSupportedContent">
 
             <ul class="navbar-nav ml-auto">
                 <div class="hori-selector" style="width:100%;"><div class="left"></div><div class="right"></div></div>
@@ -711,7 +743,7 @@
                            <%} %>
                    </div>
                <div class="col-sm" style="padding:0px;margin:0px;">
-                   <h1 class="username fs-2 visitor"><%=username_from_session %></h1>
+                   <h1 class="username fs-2 visitor" style="font-size:1.3rem!important;margin-top:9px;"><%=username_from_session %></h1>
               <asp:Label ID="userName"  CssClass="usernamehide"  Text="Visitor" ForeColor="Wheat"   runat="server"></asp:Label>
           </div>
                </div>
@@ -872,20 +904,18 @@
              <hr />
            <div class="row text-center " style="color:black">
                <div class="col">
-                <h3 class="fs-4">Bhupinder</h3>
+                <h3 class="fs-4 bottomtext">Bhupinder</h3>
                 </div>
                <div class="col">
-                   <h3 class="fs-4">&copy;CopyRight 2020</h3>
+                   <h3 class="fs-4 bottomtext">&copy;CopyRight 2020</h3>
                 </div>
                <div class="col">
-                   <h3 class="fs-4">bhupinder2121221@gmail.com</h3>
+                   <h3 class="fs-4 bottomtext">bhupinder2121221@gmail.com</h3>
                 </div>
                <div class="col">
-                   <h3 class="fs-4"> Roll no. 17031874265</h3>
+                   <h3 class="fs-4 bottomtext"> Roll no. 17031874265</h3>
                 </div>
-               <div class="row">
-                   Resourses used from <a href="https://icons8.com/icon/M4SmNocbbb58/tune">Tune icon by Icons8</a>
-               </div>
+              
                </div>
   </footer>
 

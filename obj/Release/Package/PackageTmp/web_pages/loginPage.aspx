@@ -173,7 +173,7 @@
 <body class="backgroundpicture">
     
 
-    <nav class="navbar navbar-expand bg-light navbar-light" style="z-index:3">
+    <nav class="navbar navbar-expand bg-light navbar-light" style="z-index:3;    box-shadow: 0px 3px 19px;">
        <a href="homepage.aspx"> <h1 class="navbar-brand fs-1">Adda1By0</h1></a>
     </nav>
     
@@ -211,7 +211,10 @@
             <asp:HiddenField ID="pathToImageUpload" Value="" runat="server" />
             <asp:Label ID="heading" CssClass="heading fs-2" runat="server">Registration Portal</asp:Label>
             <hr style="" />
-            <br /><br />
+            <div class="row">
+            <h4 style="    font-size: 1rem;width:auto;    color: darkblue;">Already have an Adda1by0 account?</h4><a style="color: purple; width:auto;    font-weight: 600;" href="signInPage.aspx">Login Here</a>
+            </div>
+                <br /><br />
 
             <div class="row">
                 <div class="col-md">

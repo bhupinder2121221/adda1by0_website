@@ -55,6 +55,9 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="databasenameofadda1by0">
+      <HintPath>C:\Users\bhupi\source\repos\databasenameofadda1by0\databasenameofadda1by0\bin\Debug\netstandard2.0\databasenameofadda1by0.dll</HintPath>
+    </Reference>
     <Reference Include="Emgu.CV.Platform.NetStandard, Version=4.4.0.4099, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
       <HintPath>packages\Emgu.CV.4.4.0.4099\lib\netstandard2.0\Emgu.CV.Platform.NetStandard.dll</HintPath>
     </Reference>
@@ -217,6 +220,7 @@
     <Content Include="startingpageOfWebsite.aspx" />
     <Content Include="TextFile1.txt" />
     <Content Include="web_pages\changepassword.aspx" />
+    <Content Include="web_pages\email.html" />
     <Content Include="web_pages\sponsership.aspx" />
     <Content Include="windowCloseEvent.js" />
     <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\css\bootstrap-grid.css.map" />
@@ -241,9 +245,6 @@
     <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\js\bootstrap.esm.min.js.map" />
     <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\js\bootstrap.js.map" />
     <Content Include="bootsrap\bootstrap-5.0.0-beta1-dist\js\bootstrap.min.js.map" />
-    <None Include="face_training\haarcascade_frontalface_alt_tree.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <Content Include="flex.js" />
     <Content Include="images\1067_delete_Cancel_close_cross-512.png" />
     <Content Include="images\adda1by0.png" />
@@ -407,6 +408,7 @@
     <Compile Include="web_pages\courses.aspx.designer.cs">
       <DependentUpon>courses.aspx</DependentUpon>
     </Compile>
+    <Compile Include="web_pages\databsename.cs" />
     <Compile Include="web_pages\homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -473,20 +475,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\sample\TextBox.skin" />
-    <Content Include="models\face_landmark_68_model-shard1" />
-    <Content Include="models\face_landmark_68_model-weights_manifest.json" />
-    <Content Include="models\face_recognition_model-shard1" />
-    <Content Include="models\face_recognition_model-shard2" />
-    <Content Include="models\face_recognition_model-weights_manifest.json" />
-    <Content Include="models\mtcnn_model-shard1" />
-    <Content Include="models\mtcnn_model-weights_manifest.json" />
-    <Content Include="models\ssd_mobilenetv1_model-shard1" />
-    <Content Include="models\ssd_mobilenetv1_model-shard2" />
-    <Content Include="models\ssd_mobilenetv1_model-weights_manifest.json" />
-    <Content Include="models\tiny_face_detector_model-shard1" />
-    <Content Include="models\tiny_face_detector_model-weights_manifest.json" />
-    <Content Include="models\face_expression_model-shard1" />
-    <Content Include="models\face_expression_model-weights_manifest.json" />
     <Content Include="App_Themes\models\face_expression_model-shard1" />
     <Content Include="App_Themes\models\face_expression_model-weights_manifest.json" />
     <Content Include="App_Themes\models\face_landmark_68_model-shard1" />
@@ -498,8 +486,9 @@
     <Content Include="App_Themes\models\face_recognition_model-weights_manifest.json" />
     <Content Include="App_Themes\models\tiny_face_detector_model-shard1" />
     <Content Include="App_Themes\models\tiny_face_detector_model-weights_manifest.json" />
-    <Content Include="models\face_expression_model-shard1 - Copy" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -14,6 +14,7 @@ namespace add1By0
 {
     public partial class setLiveStreaming : System.Web.UI.Page
     {
+        string adda1by0_databasename = "adda1by0";
         MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
         public string userEmail = "";
         public string topicName = "";
@@ -38,7 +39,7 @@ namespace add1By0
             {
                 bool found = false;
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from adda1by0.registration where email='" + userEmail+"';", conn);
+                MySqlCommand cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".registration where email='" + userEmail+"';", conn);
                 var rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
@@ -55,7 +56,7 @@ namespace add1By0
             {
                 bool found = false;
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from adda1by0.login_admins where email='" + userEmail + "';", conn);
+                MySqlCommand cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".login_admins where email='" + userEmail + "';", conn);
                 var rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
@@ -84,7 +85,7 @@ namespace add1By0
                 {
                     bool closeClass = false;
                     conn.Open();
-                    MySqlCommand cmd = new MySqlCommand("select * from adda1by0.login_admins where email='" + userEmail + "';", conn);
+                    MySqlCommand cmd = new MySqlCommand("select * from "+ adda1by0_databasename + ".login_admins where email='" + userEmail + "';", conn);
                     var rdr = cmd.ExecuteReader();
                     while (rdr.Read())
                     {
@@ -93,7 +94,7 @@ namespace add1By0
                     rdr.Close();
                     if (closeClass)
                     {
-                        cmd = new MySqlCommand("delete from adda1by0.courses where CourseName='" + topicName + "';", conn);
+                        cmd = new MySqlCommand("delete from "+ adda1by0_databasename + ".courses where CourseName='" + topicName + "';", conn);
                         cmd.ExecuteNonQuery();
 
                     }
